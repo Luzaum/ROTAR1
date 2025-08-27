@@ -1,0 +1,1072 @@
+
+{
+  "meta": {
+    "batch": 3,
+    "total_batches": 3,
+    "taxonomy_version": "v1.0",
+    "generator": "manual-entry",
+    "notes": ["Questões UFV 2023 (corrigido rotulagem de ano)."],
+    "persistence": {
+      "strategy": ["json_canonical"],
+      "conflicts": "upsert_on_checksum",
+      "defaults": { "namespace": "vet-residencia", "schema_version": 1 }
+    }
+  },
+  "items": [
+    {
+      "id": "UFV-2022-DI-0015",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["DIAGNÓSTICO POR IMAGEM"],
+      "topic_tags": ["RADIOGRAFIA", "ULTRASSONOGRAFIA", "AVALIAÇÃO COMPARATIVA"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Sobre os exames complementares de imagem em cães e gatos, assinale a afirmativa INCORRETA.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "A avaliação da próstata do cão pode ser indicada em cães machos com histórico de tenesmo e dificuldade de se levantar."},
+        {"label": "B", "text": "O exame radiográfico do tórax está indicado em pacientes com suspeitas de diferentes afecções afetando os sistemas respiratório, digestório e cardiovascular."},
+        {"label": "C", "text": "O exame ultrassonográfico é indicado na avaliação de suspeitas de corpo estranho gastrointestinal pois pode identificar um padrão obstrutivo e/ ou o próprio corpo estranho."},
+        {"label": "D", "text": "Uma das indicações da avaliação ultrassonográfica de hérnias perineais e inguinais é avaliar a presença de órgãos abdominais no conteúdo herniário."},
+        {"label": "E", "text": "A radiografia substitui a ultrassonografia na avaliação das urolitíases."}
+      ],
+      "answer_type": "single",
+      "answer_key": "E",
+      "rationales": {
+        "A": "Correta. A avaliação prostática por imagem é indicada em cães com sinais compatíveis (tenesmo, dificuldade de levantar, disquesia).",
+        "B": "Correta. A radiografia torácica é exame de triagem para diversas afecções respiratórias, digestivas e cardiovasculares.",
+        "C": "Correta. O ultrassom é útil para identificar padrão obstrutivo e pode visualizar o corpo estranho.",
+        "D": "Correta. O ultrassom auxilia a identificar conteúdo herniário e complicações.",
+        "E": "Incorreta. Os métodos são complementares. A radiografia não substitui o ultrassom na urolitíase; o US detecta cálculos radiolucentes e avalia uropatia obstrutiva, enquanto a radiografia é melhor para cálculos radiopacos e planejamento cirúrgico."
+      },
+      "review": {
+        "fisiologia": "Radiografia e ultrassonografia possuem sensibilidades distintas para diferentes materiais (radiopacos vs radioluscentes) e fornecem informações complementares de anatomia e conteúdo.",
+        "high_yield": [
+          "Urolitíase: US vê cálculos radioluscentes e hidronefrose; RX melhor para mineral densamente radiopaco.",
+          "Hérnias: US identifica conteúdo e vascularização.",
+          "RX torácico = triagem ampla."
+        ],
+        "pegadinhas": [
+          "Achar que um método substitui o outro na urolitíase."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-DI-0016",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["DIAGNÓSTICO POR IMAGEM"],
+      "topic_tags": ["ULTRASSONOGRAFIA", "DIAGNÓSTICO DEFINITIVO"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Assinale a opção na qual o exame complementar de imagem descrito NÃO é capaz de fornecer o diagnóstico final da afecção listada.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "Ultrassonografia no pneumotórax"},
+        {"label": "B", "text": "Radiografia na hérnia diafragmática"},
+        {"label": "C", "text": "Ultrassonografia no ureter ectópico"},
+        {"label": "D", "text": "Ultrassonografia na intussuscepção"},
+        {"label": "E", "text": "Radiografia na fratura de osso longo"}
+      ],
+      "answer_type": "single",
+      "answer_key": "C",
+      "rationales": {
+        "A": "Incorreta como opção (o exame é capaz). US detecta ausência de deslizamento pleural e 'lung point' → diagnóstico de pneumotórax.",
+        "B": "Incorreta como opção. RX geralmente confirma hérnia diafragmática (alças/órgãos abdominais no tórax, perda do contorno diafragmático).",
+        "C": "Correta. O diagnóstico definitivo de ureter ectópico requer uro-TC/cistoscopia; o US levanta suspeita (hidroureter, jato ureteral anômalo) mas não é confirmatório em muitos casos.",
+        "D": "Incorreta como opção. Intussuscepção possui imagem ultrassonográfica típica em 'alvo'.",
+        "E": "Incorreta como opção. Fratura de osso longo é diagnosticada por RX."
+      },
+      "review": {
+        "fisiologia": "US é diagnóstico para padrões patognomônicos (ex.: intussuscepção). Ureter ectópico exige método contrastado/endo para localização do óstio.",
+        "high_yield": [
+          "Pneumotórax no US: ausência de 'lung sliding' e 'B-lines'.",
+          "Ureter ectópico: padrão‑ouro = uro-TC/cistoscopia."
+        ],
+        "pegadinhas": [
+          "Confundir capacidade diagnóstica do US entre condições muito distintas."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CM-0017",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["GASTROENTEROLOGIA", "ANTIBIOTICOTERAPIA"],
+      "difficulty": "F",
+      "cognitive_level": "Lembrar",
+      "stem": "Assinale a alternativa INCORRETA em relação as Gastroenterites.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "A antibioticoterapia é indicada em todos os casos."},
+        {"label": "B", "text": "Gastroenterites hemorrágicas podem evoluir para choque séptico."},
+        {"label": "C", "text": "Hipovolemia e hipotensão podem ocorrer nos casos mais graves."},
+        {"label": "D", "text": "A hipocalemia é um achado esperado como consequência da anorexia e dos vômitos."},
+        {"label": "E", "text": "Dietas de alta digestibilidade são recomendadas na fase de recuperação."}
+      ],
+      "answer_type": "single",
+      "answer_key": "A",
+      "rationales": {
+        "A": "Correta como INCORRETA. Antibiótico não é indicado em todos os casos; a maioria das gastroenterites é autolimitada/viral/alimentar.",
+        "B": "Correta. Hemorragia intestinal severa pode cursar com sepse e choque.",
+        "C": "Correta. Perdas gastrointestinais importantes causam hipovolemia/hipotensão.",
+        "D": "Correta. Vômitos prolongados e anorexia levam à depleção de K+.",
+        "E": "Correta. Dieta de alta digestibilidade auxilia recuperação da mucosa."
+      },
+      "review": {
+        "fisiologia": "Antibiótico só quando há suspeita de infecção bacteriana invasiva, translocação ou fatores de risco (neutropenia, hematoquezia grave, leptospirose, parvovirose complicada).",
+        "high_yield": [
+          "Reposição volêmica e antieméticos são pilares.",
+          "Evitar antibiótico empírico rotineiro."
+        ],
+        "pegadinhas": [
+          "Pressupor antibiótico para qualquer diarreia/vômito."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CM-0018",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA MÉDICA", "CARDIOLOGIA"],
+      "topic_tags": ["DIURÉTICOS", "TORASEMIDA", "INSUFICIÊNCIA CARDÍACA"],
+      "difficulty": "M",
+      "cognitive_level": "Entender",
+      "stem": "Sobre a Torasemida, assinale a afirmativa INCORRETA.",
+       "media": [],
+      "options": [
+        {"label": "A", "text": "É cerca de 10 a 20 vezes mais potente que a furosemida."},
+        {"label": "B", "text": "É contraindicada em pacientes com hipersensibilidade ao fármaco, desidratação ou sérias depleções eletrolíticas."},
+        {"label": "C", "text": "Pode induzir anormalidades hidroeletrolíticas e pode resultar em azotemia pós-renal se ocorrer moderada ou severa desidratação."},
+        {"label": "D", "text": "Efeitos adversos incluem manifestações gastrointestinais (vômitos, diarreia, anorexia) e renais (poliuria, elevação de marcadores renais, insuficiência renal)."},
+        {"label": "E", "text": "É uma opção para o tratamento de cães com insuficiência cardíaca congestiva, como naqueles que não respondem adequadamente à fusosemida."}
+      ],
+      "answer_type": "single",
+      "answer_key": "C",
+      "rationales": {
+        "A": "Correta. Torasemida é mais potente que furosemida (aprox. 10–20×).",
+        "B": "Correta. Contraindicações clássicas incluem hipersensibilidade, desidratação e distúrbios eletrolíticos severos.",
+        "C": "Incorreta. O risco é de azotemia PRÉ‑renal por hipovolemia; 'pós‑renal' não é mecanismo típico do diurético.",
+        "D": "Correta. Efeitos adversos gastrointestinais e renais são descritos.",
+        "E": "Correta. É alternativa em ICC refratária à furosemida."
+      },
+      "review": {
+        "fisiologia": "Diurético de alça com maior biodisponibilidade e meia‑vida. Monitorar eletrólitos e função renal para evitar azotemia pré‑renal.",
+        "high_yield": [
+          "Torasemida em ICC refratária.",
+          "Azotemia pré‑renal por hipovolemia, não pós‑renal."
+        ],
+        "pegadinhas": [
+          "Confundir mecanismos de azotemia."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CC-0019",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA CIRÚRGICA"],
+      "topic_tags": ["FISIOPATOLOGIA", "RESPOSTA AO TRAUMA"],
+      "difficulty": "D",
+      "cognitive_level": "Análise",
+      "stem": "A resposta metabólica ao trauma, também denominada resposta de estresse ou reação de fase aguda do trauma, são amplamente estudados pela medicina humana e veterinária, e caracteriza-se por alterações neuroendócrinas e imunológicas, desencadeadas para restabelecer a homeostase e preservar a vida. Com relação ao tema, analise as afirmações a seguir e assinale a alternativa INCORRETA.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "A resposta metabólica ao trauma é caracterizada pelo aumento da secreção de hormônios hipofisários, ativação do sistema nervoso simpático e secreção de citocinas pró-inflamatórias, nas quais diferentes fatores podem influenciar sua intensidade, como magnitude e duração dos estímulos, enfermidades ou eventos traumáticos pré-existentes, protocolos anestésicos e técnicas cirúrgicas utilizadas."},
+        {"label": "B", "text": "O objetivo da resposta metabólica ao trauma é manter a perfusão tecidual, controlar a proliferação de microrganismos e mobilizar substratos para garantir a integridade das funções celulares e promover reparação tecidual."},
+        {"label": "C", "text": "Em 1932, David Cuthbertson estabeleceu que a resposta metabólica ao trauma apresenta duas fases distintas: “ebb phase” e “flow phase”. A primeira fase (“ebb phase”) se inicia imediatamente após a injúria e tem por objetivo restaurar a volemia e restabelecer a perfusão tecidual. A segunda fase (“flow phase”), também denominada hiperdinâmica, é caracterizada pelo aumento do metabolismo, com intensa mobilização de energia e substratos proteicos, para garantir a reparação tecidual e as funções orgânicas críticas."},
+        {"label": "D", "text": "Embora a resposta orgânica seja essencial para garantir a homeostase após o trauma cirúrgico, reações exacerbadas podem levar a complicações pós-operatórias, tempo prolongado de recuperação e óbito, especialmente em pacientes debilitados por trauma anterior ou enfermidades pré-existentes."},
+        {"label": "E", "text": "A perpetuação de níveis excessivos de catecolaminas pode causar aumento da frequência e contratilidade cardíaca, gerando menor consumo de oxigênio pelo miocárdio. As catecolaminas também induzem lipólise intensa, com consequente hipolipidemia e embolia gordurosa. A vasodilatação persistente promove hipóxia celular e alcalose metabólica. O excesso de cortisol induz anabolismo intenso e supressão do sistema imune. Quanto maior a injúria tecidual, mais intenso e duradouro o anabolismo, sendo este responsável pela ocorrência de ganho de peso, edema subcutâneo e perivascular e hiperatividade pós-operatória."}
+      ],
+      "answer_type": "single",
+      "answer_key": "E",
+      "rationales": {
+        "A": "Correta.",
+        "B": "Correta.",
+        "C": "Correta. Descrição clássica das fases 'ebb' e 'flow'.",
+        "D": "Correta.",
+        "E": "Incorreta. A catecolaminemia aumenta o consumo miocárdico de O2; há hiperlipidemia (não hipolipidemia) por lipólise; vasoconstrição (não vasodilatação) na fase inicial; o excesso de cortisol causa catabolismo e perda de peso; não há 'anabolismo' com ganho ponderal."
+      },
+      "review": {
+        "fisiologia": "Resposta ao trauma: fase 'ebb' (hipodinâmica) → restauração da perfusão; fase 'flow' (hiperdinâmica) com catabolismo, hipermetabolismo e resposta inflamatória sistêmica.",
+        "high_yield": [
+          "Catecolaminas ↑ consumo O2, taquicardia; cortisol = catabolismo.",
+          "Complicações de resposta exacerbada: SIRS, sepse, falência orgânica."
+        ],
+        "pegadinhas": [
+          "Trocar catabolismo por anabolismo."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CM-0020",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["NEUROLOGIA", "LOCALIZAÇÃO DA LESÃO"],
+      "difficulty": "M",
+      "cognitive_level": "Aplicação",
+      "stem": "Cães e gatos com sinais de alterações no sistema nervoso são atendidos com frequência na rotina de um hospital veterinário. Determinar a localização da lesão no sistema nervoso é fundamental para definir o diagnóstico, o tratamento e o prognóstico da doença. Com relação à localização da lesão no sistema nervoso e os sinais clínicos, relacione a coluna 1 à coluna 2.\nColuna 1\n1. Síndrome toraco-lombar\n2. Síndrome medular cervical\n3. Síndrome vestibular\n4. Síndrome lombo-sacra\n5. Síndrome cerebelar\n6. Síndrome cervico-torácica\nColuna 2\n( ) Tremor de intenção de cabeça, nistágmo, anisocoria, base de apoio aberta, hipermetria, opistótono.\n( ) Desequilíbrios e quedas, andar em círculos, estrabismo, síndrome de Horner.\n( ) Hiperreflexia e hipertonia dos 4 membros, deambulação com cabeça baixa.\n( ) Hiporreflexia e hipotonia dos membros torácicos, hiperreflexia dos membros pélvicos.\n( ) Reflexos e tônus normais nos membros torácicos, hiperreflxia e hipertonia dos membros pélvicos, atrofia lenta dos membros pélvicos.\n( ) Hiporreflexia e hipotonia dos membros pélvicos, reflexos e tônus normais nos membros torácicos, atrofia rápida dos membros pélvicos.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "5-3-2-6-1-4"},
+        {"label": "B", "text": "6-5-1-2-3-4"},
+        {"label": "C", "text": "2-6-5-4-3-1"},
+        {"label": "D", "text": "2-6-1-3-5-4"},
+        {"label": "E", "text": "1-2-5-6-3-4"}
+      ],
+      "answer_type": "single",
+      "answer_key": "A",
+      "rationales": {
+        "A": "Correta. (1) cerebelo ↔ tremor de intenção/hipermetria; (3) vestibular ↔ quedas/círculos/Horner; (2) medular cervical ↔ tetraparesia espástica (hiperreflexia 4M); (6) cervico‑torácica ↔ LMN torácicos + UMN pélvicos; (1) toraco‑lombar ↔ UMN pélvicos; (4) lombo‑sacra ↔ LMN pélvicos.",
+        "B": "Incorreta.",
+        "C": "Incorreta.",
+        "D": "Incorreta.",
+        "E": "Incorreta."
+      },
+      "review": {
+        "fisiologia": "Síndromes medulares: lesão cranial ao intumescimento torácico → UMN em 4M; cervico‑torácica → LMN torácico/UMN pélvico; toraco‑lombar → UMN pélvico; lombo‑sacro → LMN pélvico.",
+        "high_yield": [
+          "Cerebelo = tremor de intenção/hipermetria.",
+          "Vestibular = quedas/círculos/nistagmo."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CM-0021",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["GASTROENTEROLOGIA", "INSUFICIÊNCIA PANCREÁTICA EXÓCRINA"],
+      "difficulty": "M",
+      "cognitive_level": "Entender",
+      "stem": "Assinale a alternativa CORRETA em relação a insuficiência pancreática exócrina.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "A insuficiência pancreática exócrina pode ter como causa a pancreatite crônica em cães mais velhos e em felinos."},
+        {"label": "B", "text": "A ultrassonografia abdominal é um método sensível e específico para diagnóstico da insuficiência pancreática exócrina."},
+        {"label": "C", "text": "A ausência de teste laboratorial confiável para diagnóstico de insuficiência pancreática exócrina faz o exame histopatológico o método de escolha para realizar o diagnóstico."},
+        {"label": "D", "text": "A esteatorréia é um sinal exclusivo de insuficiência pancreática exócrina."},
+        {"label": "E", "text": "É uma doença apenas dos cães. Não acomete os felinos."}
+      ],
+      "answer_type": "single",
+      "answer_key": "A",
+      "rationales": {
+        "A": "Correta. Em cães idosos e em gatos, a EPI pode ser secundária à pancreatite crônica.",
+        "B": "Incorreta. O diagnóstico é sorológico pelo TLI (tripsina‑like immunoreactivity). US é pouco sensível para EPI.",
+        "C": "Incorreta. O teste TLI é o padrão de referência; histo não é necessária.",
+        "D": "Incorreta. Esteatorreia também ocorre em outras enteropatias/má‑absorção.",
+        "E": "Incorreta. EPI acomete também felinos."
+      },
+      "review": {
+        "fisiologia": "EPI = produção insuficiente de enzimas pancreáticas → má digestão/má absorção. Diagnóstico: TLI baixo; tratamento: reposição enzimática + dieta.",
+        "high_yield": [
+          "Teste TLI para EPI.",
+          "EPI em gatos existe e é relevante."
+        ],
+        "pegadinhas": [
+          "Confiar no US para EPI."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CM-0022",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA MÉDICA", "LABORATÓRIO CLÍNICO"],
+      "topic_tags": ["ENDOCRINOLOGIA", "HIPERLIPIDEMIA"],
+      "difficulty": "M",
+      "cognitive_level": "Entender",
+      "stem": "Assinale a alternativa CORRETA em relação as hiperlipidemias.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "O aumento de colesterol e triglicérides podem provocar hepatopatias vacuolares associada a esteatose."},
+        {"label": "B", "text": "A hipercolestorolemia não é fator de risco para pancreatite em cães."},
+        {"label": "C", "text": "O aumento de colesterol total e triglicérides não tem relação com hiperadrenocorticismo."},
+        {"label": "D", "text": "Fibratos são contraindicados como hipolipemiantes."},
+        {"label": "E", "text": "Hiperlipidemia é comum em cães pastores alemães, sendo classificada como familiar nessa raça."}
+      ],
+      "answer_type": "single",
+      "answer_key": "A",
+      "rationales": {
+        "A": "Correta. Hiperlipidemia crônica pode induzir vacuolização hepática (esteatose).",
+        "B": "Incorreta. Hipertrigliceridemia é fator de risco para pancreatite em cães.",
+        "C": "Incorreta. HAC frequentemente cursa com hiperlipidemia.",
+        "D": "Incorreta. Fibratos podem ser utilizados como hipolipemiantes em cães selecionados.",
+        "E": "Incorreta. Hiperlipidemia familiar é clássica em Schnauzer Miniatura."
+      },
+      "review": {
+        "fisiologia": "Hiperlipidemias podem ser primárias (familiares) ou secundárias (HAC, diabetes, hipotireoidismo).",
+        "high_yield": [
+          "Risco de pancreatite com TG altos.",
+          "Schnauzer Miniatura = predisposição."
+        ],
+        "pegadinhas": [
+          "Atribuir quadro a Pastor Alemão; negligenciar causas secundárias."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CM-0023",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA MÉDICA", "CLÍNICA CIRÚRGICA"],
+      "topic_tags": ["GASTROENTEROLOGIA", "MUCOCELE BILIAR"],
+      "difficulty": "M",
+      "cognitive_level": "Entender",
+      "stem": "Assinale a alternativa CORRETA em relação a Mucocele biliar.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "É uma doença comum em felinos tanto quanto em cães."},
+        {"label": "B", "text": "A lama biliar é um tipo de mucocele biliar."},
+        {"label": "C", "text": "O tratamento cirúrgico não é indicado pela boa resposta ao tratamento clínico."},
+        {"label": "D", "text": "Mucocele biliar é mais comum em cães jovens com alimentação restrita em gordura."},
+        {"label": "E", "text": "O hiperadrenocorticismo aumenta o risco para desenvolvimento de mucocele biliar em cães."}
+      ],
+      "answer_type": "single",
+      "answer_key": "E",
+      "rationales": {
+        "A": "Incorreta. Mais comum em cães do que em gatos.",
+        "B": "Incorreta. Lama biliar não é mucocele.",
+        "C": "Incorreta. Na maioria dos casos, o tratamento definitivo é cirúrgico (colecistectomia).",
+        "D": "Incorreta. Ocorre mais em cães de meia‑idade a idosos.",
+        "E": "Correta. HAC é fator de risco descrito para mucocele biliar."
+      },
+      "review": {
+        "fisiologia": "Mucocele biliar = depósito de mucina e material gelatinoso na vesícula, associado a hipomotilidade e endocrinopatias.",
+        "high_yield": [
+          "Tratamento: colecistectomia quando viável.",
+          "Associação com HAC e hipotireoidismo."
+        ],
+        "pegadinhas": [
+          "Chamar lama biliar de mucocele."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CM-0024",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["GASTROENTEROLOGIA", "DOENÇA INFLAMATÓRIA INTESTINAL"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Assinale a alternativa CORRETA em relação as Enteropatias crônicas.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "A ultrassonografia abdominal permite o diagnóstico definitivo da doença inflamatória intestinal."},
+        {"label": "B", "text": "A biopsia intestinal confirma o diagnóstico da doença inflamatória intestinal."},
+        {"label": "C", "text": "O diagnóstico da doença inflamatória intestinal é comum em felinos com diarreias agudas."},
+        {"label": "D", "text": "A cronicidade do quadro, inflamação intestinal na biopsia e exclusão de outras causas que provocam inflamação intestinal são os critérios exigidos para o diagnóstico de doença inflamatória intestinal."},
+        {"label": "E", "text": "Doença inflamatória intestinal e linfoma alimentar de células pequenas apresentam quadros clínicos distintos em felinos."}
+      ],
+      "answer_type": "single",
+      "answer_key": "D",
+      "rationales": {
+        "A": "Incorreta. US não confirma DII; é exame auxiliar.",
+        "B": "Incorreta. A biópsia confirma inflamação, mas é preciso excluir outras causas e ter cronicidade.",
+        "C": "Incorreta. DII é condição crônica; diarreias agudas não definem o quadro.",
+        "D": "Correta. Critérios para diagnóstico de DII em cães e gatos.",
+        "E": "Incorreta. DII e linfoma de pequenas células têm apresentação muito semelhante em felinos."
+      },
+      "review": {
+        "fisiologia": "DII é diagnóstico de exclusão: sinais crônicos, inflamação histológica e exclusão de parasitas, dietas responsivas e outras enteropatias.",
+        "high_yield": [
+          "DII felina x linfoma de pequenas células: sobreposição; PCR/imuno-histo pode ajudar."
+        ],
+        "pegadinhas": [
+          "Basear-se apenas no US ou na biópsia isoladamente."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CM-0025",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["NEUROLOGIA", "SÍNDROME VESTIBULAR"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Assinale a alternativa CORRETA em relação a síndrome vestibular.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "A presença de nistágmo horizontal indica síndrome vestibular central."},
+        {"label": "B", "text": "Perda do tônus facial e mandibular são sinais de síndrome vestibular."},
+        {"label": "C", "text": "Otite externa pode causar síndrome vestibular periférica."},
+        {"label": "D", "text": "A propriocepção consciente nos membros torácicos e pélvicos diminuída em um paciente com sinais vestibulares sugere lesão vestibular central."},
+        {"label": "E", "text": "Síndrome vestibular periférica é manifestação de alteração do sétimo par de nervos cranianos (nervo facial)."}
+      ],
+      "answer_type": "single",
+      "answer_key": "D",
+      "rationales": {
+        "A": "Incorreta. Nistagmo horizontal pode ocorrer em vestibular periférico ou central.",
+        "B": "Incorreta. Tônus facial/mandibular relaciona‑se ao nervo facial/trigêmeo; não caracteriza vestibular.",
+        "C": "Incorreta. Otite INTERNA/media (não externa) é causa de vestibular periférico.",
+        "D": "Correta. Déficits proprioceptivos indicam acometimento de vias ascendentes no tronco encefálico/cérebro (lesão central).",
+        "E": "Incorreta. Vestibular periférico envolve VIII par ou labirinto, não o VII diretamente (apesar de paresia facial poder coexistir por lesão conjunta)."
+      },
+      "review": {
+        "fisiologia": "Vestibular periférico: ataxia, head tilt, nistagmo horizontal/rotatório, propriocepção preservada. Central: déficits proprioceptivos, alteração de pares cranianos múltiplos, nistagmo vertical possível.",
+        "high_yield": [
+          "Propriocepção ↓ = sugere central."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CM-0026",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["GASTROENTEROLOGIA", "COLITE ULCERATIVA HISTIOCÍTICA"],
+      "difficulty": "M",
+      "cognitive_level": "Aplicação",
+      "stem": "Assinale a alternativa correta. Qual o provável diagnóstico para um cão da raça Bulldog Francês, 7 meses de idade, com histórico de hematoquezia recorrente há dois meses, disquezia e diarreia de intestino grosso. Três exames coproparasitológicos negativos com amostras fecais colhidas em diferentes momentos.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "Giardíase."},
+        {"label": "B", "text": "Hipersensibilidade alimentar."},
+        {"label": "C", "text": "Colite ulcerativa histiocítica (Granulomatosa)."},
+        {"label": "D", "text": "Colite pseudomembranosa por Clostridium dificili."},
+        {"label": "E", "text": "Histoplasmose."}
+      ],
+      "answer_type": "single",
+      "answer_key": "C",
+      "rationales": {
+        "A": "Incorreta. Três copro negativos e sinais típicos em bulldog jovem tornam Giardia menos provável.",
+        "B": "Incorreta. Pode ocorrer, mas a raça/idade e quadro sugerem fortemente colite ulcerativa histiocítica.",
+        "C": "Correta. Colite ulcerativa histiocítica é típica de raças braquicefálicas jovens como Bulldog Francês.",
+        "D": "Incorreta. Quadro não é típico de pseudomembranosa.",
+        "E": "Incorreta. Histoplasmose é rara e teria outras pistas sistêmicas."
+      },
+      "review": {
+        "fisiologia": "Colite ulcerativa histiocítica (E. coli invasiva) cursa com hematoquezia e tenesmo em jovens braquicefálicos; diagnóstico por biópsia/ISH e tratamento com fluoroquinolonas dirigidas.",
+        "high_yield": [
+          "Raça/idade são pistas importantes."
+        ],
+        "pegadinhas": [
+          "Atribuir a parasitas com copro negativo reiterado."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CM-0027",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["SISTEMA RESPIRATÓRIO", "TOSSE"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Sobre a tosse em cães e gatos, assinale a afirmativa INCORRETA.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "A pneumonia pode não se apresentar com tosse."},
+        {"label": "B", "text": "O edema pulmonar cardiogênico pode não se apresentar com tosse."},
+        {"label": "C", "text": "A tosse é na maioria das vezes induzida por estímulos nas vias aéreas."},
+        {"label": "D", "text": "Quando improdutiva indica origem cardíaca e quando produtiva origem respiratória."},
+        {"label": "E", "text": "Uma das causas mais frequentes de tosse em felinos é a doença inflamatórias das vias aéreas."}
+      ],
+      "answer_type": "single",
+      "answer_key": "D",
+      "rationales": {
+        "A": "Correta.",
+        "B": "Correta.",
+        "C": "Correta.",
+        "D": "Incorreta como afirmação. A pos‑carga tende a estar aumentada/normal; o que reduz é o débito cardíaco levando a sinais de baixo fluxo.",
+        "E": "Correta. Remodelamento causa insuficiências valvares funcionais."
+      },
+      "review": {
+        "fisiologia": "CMD canina = disfunção sistólica com dilatação e remodelamento → baixo débito, ICC, arritmias.",
+        "high_yield": [
+          "Baixo débito ≠ baixa pós‑carga."
+        ],
+        "pegadinhas": [
+          "Confundir variáveis hemodinâmicas."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CC-0029",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA CIRÚRGICA"],
+      "topic_tags": ["NEUROLOGIA", "PARALISIA DE LARINGE"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Sobre à paralisia laríngea em cães, assinale a afirmativa INCORRETA.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "Pode ocorrer como consequência da miastenia gravis."},
+        {"label": "B", "text": "A neuropatia decorrente do hipotireoidismo é proposta como uma das causas possíveis para a paralisia laríngea."},
+        {"label": "C", "text": "Pode ocorrer pela presença de massas ou traumas na região cervical ventral que podem causar lesão direta do nervo laringo recorrente."},
+        {"label": "D", "text": "Pode ocorrer pela presença de massas ou traumas na região anterior da cavidade torácica que podem causar lesão direta do nervo laringo recorrente."},
+        {"label": "E", "text": "O diagnóstico é feito por laringoscopia pois permite avaliar a movimentação das cartilagens aritenoides em plano anestésico-cirúrgico."}
+      ],
+      "answer_type": "single",
+      "answer_key": "E",
+      "rationales": {
+        "A": "Correta. Miastenia gravis pode cursar com paralisia laríngea.",
+        "B": "Correta. Neuropatia por hipotireoidismo é associada.",
+        "C": "Correta. Lesões cervicais ventrais podem danificar o nervo laringo recorrente.",
+        "D": "Correta. Lesões no tórax cranial também podem afetá‑lo.",
+        "E": "Incorreta. O diagnóstico por laringoscopia deve ser feito em plano anestésico leve para não abolir a movimentação; e a avaliação do movimento exige técnicas adequadas (eventualmente doxapram)."
+      },
+      "review": {
+        "fisiologia": "Paralisia laríngea = falha na abdução das aritenoides durante a inspiração. Exame endoscópico requer plano leve e estímulo respiratório.",
+        "high_yield": [
+          "Avaliar em plano leve; considerar doxapram."
+        ],
+        "pegadinhas": [
+          "Avaliar sob anestesia profunda e concluir falsamente paralisia."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CM-0030",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["CARDIOLOGIA", "CARDIOMIOPATIA DILATADA"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "São achados comuns na cardiomiopatia dilatada canina, EXCETO a:",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "disfunção sistólica progressiva."},
+        {"label": "B", "text": "hipertrofia excêntrica progressiva e remodelamento cardíaco."},
+        {"label": "C", "text": "redução do débito cardíaco podendo levar à síncope e a intolerância ao exercício."},
+        {"label": "D", "text": "redução da pós-carga como consequência da redução do débito cardíaco."},
+        {"label": "E", "text": "má aposição dos folhetos das valvas mitral e tricúspide, por remodelamento cardíaco, levando à insuficiência valvar."}
+      ],
+      "answer_type": "single",
+      "answer_key": "D",
+      "rationales": {
+        "A": "Correta.",
+        "B": "Correta.",
+        "C": "Correta.",
+        "D": "Incorreta como afirmação. A pos‑carga tende a estar aumentada/normal; o que reduz é o débito cardíaco levando a sinais de baixo fluxo.",
+        "E": "Correta. Remodelamento causa insuficiências valvares funcionais."
+      },
+      "review": {
+        "fisiologia": "CMD canina = disfunção sistólica com dilatação e remodelamento → baixo débito, ICC, arritmias.",
+        "high_yield": [
+          "Baixo débito ≠ baixa pós‑carga."
+        ],
+        "pegadinhas": [
+          "Confundir variáveis hemodinâmicas."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CM-0031",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["NEFROLOGIA", "DOENÇA RENAL CRÔNICA", "HIPOCALEMIA"],
+      "difficulty": "F",
+      "cognitive_level": "Aplicação",
+      "stem": "Fraqueza muscular generalizada em um felino com doença renal crônica pode estar, mais provavelmente, relacionada a qual desequilíbrio abaixo?",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "Hiperglicemia"},
+        {"label": "B", "text": "Hipercalemia"},
+        {"label": "C", "text": "Hipercalcemia"},
+        {"label": "D", "text": "Hipocalemia"},
+        {"label": "E", "text": "Hipofosfatemia"}
+      ],
+      "answer_type": "single",
+      "answer_key": "D",
+      "rationales": {
+        "A": "Incorreta.",
+        "B": "Incorreta.",
+        "C": "Incorreta.",
+        "D": "Correta. Hipocalemia é causa frequente de fraqueza em gatos com DRC (perda renal de K+).",
+        "E": "Incorreta."
+      },
+      "review": {
+        "fisiologia": "DRC felina pode cursar com hipocalemia por perda tubular → fraqueza cervical ventroflexora.",
+        "high_yield": [
+          "Sempre dosar K+ em DRC felina."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CM-0032",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA MÉDICA", "LABORATÓRIO CLÍNICO"],
+      "topic_tags": ["NEFROLOGIA", "LESÃO RENAL AGUDA", "IRIS"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Segue abaixo as dosagens séricas da creatinina (mg/dL) durante os primeiros cinco dias da internação de um cão que se manteve normohidratado, normotenso e com fluxo urinário preservado. Considerando as diretrizes estabelecidas pela IRIS (International Renal Interest Society), assinale a afirmativa CORRETA.\nDia 1: 0,7\nDia 2: 1,2\nDia 3: 1,2\nDia 4: 1,5\nDia 5: 1,7",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "O animal não desenvolveu azotemia e não apresenta indícios de lesão renal aguda."},
+        {"label": "B", "text": "A creatinina é um marcador tardio e não deve ser utilizada como variável para estabelecer a lesão renal aguda."},
+        {"label": "C", "text": "A elevação da creatinina no dia 2 indica que a lesão renal pode ser estabelecida nesse momento, mesmo o animal não sendo azotêmico."},
+        {"label": "D", "text": "A elevação da creatinina no dia 5 indica que a lesão renal pode ser estabelecida nesse momento, agora com animal azotêmico"},
+        {"label": "E", "text": "Independente dos valores séricos apresentados, qualquer elevação na concentração sérica da creatinina no período deve ser interpretada como lesão renal aguda."}
+      ],
+      "answer_type": "single",
+      "answer_key": "C",
+      "rationales": {
+        "A": "Incorreta. Ausência de azotemia não exclui LRA inicial.",
+        "B": "Incorreta. Creatinina é usada nos critérios IRIS de LRA.",
+        "C": "Correta. Aumento ≥ 0,3 mg/dL em 48 h já caracteriza LRA mesmo sem azotemia.",
+        "D": "Incorreta. O diagnóstico já pode ser estabelecido antes de se tornar azotêmico.",
+        "E": "Incorreta. É necessária interpretação contextual; não 'qualquer' elevação."
+      },
+      "review": {
+        "fisiologia": "Critérios IRIS de LRA consideram incrementos absolutos de creatinina em curto período e/ou oligúria.",
+        "high_yield": [
+          "ΔCr ≥ 0,3 mg/dL em 48 h = LRA."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CM-0034",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["DERMATOLOGIA", "PIODERMITE", "ANTIBIÓTICOS"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Sobre a piodermite canina, assinale a afirmativa INCORRETA:",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "A terapia tópica empregando um ativo com atividade antiestafilocócica está indicado para o tratamento de piodermite superficial causado por MRS (estafilococos resistente à meticilina)."},
+        {"label": "B", "text": "A escolha empírica da antibioticoterapia é uma opção para os casos de piodermite causada por MRS, devido à baixa prevalência de multiresistência microbiana."},
+        {"label": "C", "text": "A foliculite bacteriana superficial é diagnóstico diferencial da dermatofitose e demodiciose"},
+        {"label": "D", "text": "A terapia tópica com xampus, para a foliculite superficial multifocal ou generalizada, deve ser aplicada inicialmente 2 a 3 vezes por semana."},
+        {"label": "E", "text": "Ácido fusídico e mupirocina são opões tópicas para as lesões piodermiticas focais."}
+      ],
+      "answer_type": "single",
+      "rationales": {
+        "A": "Incorreta. Acidentes crotálicos têm manifestações sistêmicas neuromusculares significativas, não apenas locais.",
+        "B": "Correta. O soro antibotrópico tem pouca ação sobre necrose local; desbridamento/medidas locais são necessárias.",
+        "C": "Incorreta. Escorpionismo costuma causar dor local discreta e manifestações autonômicas/sistêmicas, não intensa necrose.",
+        "D": "Incorreta. Acidentes laquéticos são menos incidentes que botrópicos.",
+        "E": "Incorreta. Loxoscelismo x phoneutrismo têm quadros e manejo diferentes; a distinção é clinicamente relevante."
+      },
+      "review": {
+        "fisiologia": "Soroterapia neutraliza frações sistêmicas; lesão local necrosante por Bothrops pode persistir. Acidentes variam conforme o animal: serpentes (Bothrops, Crotalus, Lachesis), aranhas (Loxosceles, Phoneutria), escorpiões.",
+        "high_yield": [
+          "Soro antibotrópico com pouca ação na necrose local."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CM-0035",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["DERMATOLOGIA", "DERMATOFITOSE"],
+      "difficulty": "M",
+      "cognitive_level": "Entender",
+      "stem": "Assinale a afirmativa CORRETA.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "A dermatofitose subcutânea, granulomatosa, é mais comum em gatos Persas e nos cães da raça Yorkshire Terrier."},
+        {"label": "B", "text": "Clorexidina é indicada como monoterapia no tratamento da dermatofitose."},
+        {"label": "C", "text": "O itraconazol e nistatina são fármacos indicados para o tratamento sistêmico da dermatofitose."},
+        {"label": "D", "text": "O lufeneron é uma importante terapia adjuvante na dermatofitose."},
+        {"label": "E", "text": "A resposta clínica é em geral suficiente para monitorar o tratamento da dermatofitose."}
+      ],
+      "answer_type": "single",
+      "answer_key": "A",
+      "rationales": {
+        "A": "Correta. Anti-histamínicos e ácidos graxos têm efeito modesto; ciclosporina é útil em controle crônico, mas crise aguda responde melhor a corticoide de curta duração + manejo de gatilhos.",
+        "B": "Incorreta. Oclacitinibe (JAK1) é útil tanto em fase aguda quanto crônica.",
+        "C": "Incorreta. Testes in vitro/intradérmicos auxiliam imunoterapia, não são padrão‑ouro diagnóstico; diagnóstico é clínico por exclusão.",
+        "D": "Incorreta. Corticoides são eficazes para controle de crise, porém uso prolongado exige cautela; nem sempre indicados para todas as etiologias.",
+        "E": "Correta. Identificar alérgenos/infecções secundárias é essencial."
+      },
+      "review": {
+        "fisiologia": "Dermatite atópica canina é reação de hipersensibilidade a alérgenos ambientais com disfunção de barreira cutânea. Tratamento multimodal inclui controle de crise (corticoide curto), controle crônico (oclacitinibe/ciclosporina/lofexidina tópica), controle de infecção secundária e imunoterapia específica quando possível.",
+        "high_yield": [
+          "Oclacitinibe pode ser usado em crise.",
+          "Testes alérgicos não diagnosticam DAC sozinhos."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CM-0036",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["DERMATOLOGIA", "MALASSEZIOSE"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Sobre a malasseziose tegumentar, assinale a afirmativa INCORRETA:",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "Malassezia pachytdermatis é um habitante normal da pele e mucosas de cães saudáveis."},
+        {"label": "B", "text": "A patogênese da dermatite por Malassesia sp envolve uma complexa interação entre alérgenos derivados dos fungos e a resposta imunológica tipo Th1 e Th2."},
+        {"label": "C", "text": "Cães com malasseziose frequentemente possuem fatores predisponentes como alergopatias, enfermidade seborreica ou endocrinopatias."},
+        {"label": "D", "text": "Timoma e alopecia paraneoplásica são duas das enfermidades sistêmicas que predispõe à malasseziose canina, mas não a felina."},
+        {"label": "E", "text": "O raspado de pele é um dos métodos mais recomendados para o diagnóstico citológico da malasseziose."}
+      ],
+      "answer_type": "single",
+      "answer_key": "E",
+      "rationales": {}, "review": {}, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CM-0037",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["DERMATOLOGIA", "DERMATITE ATÓPICA"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "A respeito da dermatite atópica canina, assinale a afirmativa CORRETA:",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "Anti-histamínicos, ácidos graxos essenciais e ciclosporina são fármacos muito eficientes para o tratamento da crise aguda da dermatite atópica canina."},
+        {"label": "B", "text": "Oclacitinibe possui indicação apenas para os casos de dermatite atópica cronica."},
+        {"label": "C", "text": "Os testes in vitro são o padrão ouro para o diagnóstico da dermatite atópica e da alergia alimentar."},
+        {"label": "D", "text": "O uso de glicocorticóides orais ou injetáveis são indicados para os casos de dermatite atópica, alergia alimentar e dermatite alérgica a picadas de pulgas."},
+        {"label": "E", "text": "A identificação de potenciais alérgenos ambientais, alérgenos alimentares e infecções secundárias são fundamentais para o controle da crise aguda da dermatite atópica."}
+      ],
+      "answer_type": "single",
+      "answer_key": "E",
+      "rationales": {}, "review": {}, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CM-0038",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["ENDOCRINOLOGIA"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Assinale a afirmativa INCORRETA:",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "A insulina glargina e a NPH (ou a Caninsulin) são as indicações iniciais para o tratamento do diabete melito, respectivamente no gato e no cão."},
+        {"label": "B", "text": "O exame de ACTH endógeno está indicado para a distinção entre o hiperadrenocorticismo hipófise dependente e o hiperadrenocorticismo adrenal dependente."},
+        {"label": "C", "text": "A mensuração do T4 total é o exame de eleição para o diagnóstico do hipotireoidismo canino quando ocorre a suspeição da “síndrome do eutireoideu doente”."},
+        {"label": "D", "text": "O mixedema dérmico é alteração que sugere a investigação para o hipotireoidismo canino."},
+        {"label": "E", "text": "Flebectasia cutânea é alteração que ocorre no hiperadrenocorticismo canino."}
+      ],
+      "answer_type": "single",
+      "answer_key": "C",
+      "rationales": {
+        "A": "Correta.",
+        "B": "Correta.",
+        "C": "Incorreta. Em doença sistêmica não-tireoidiana, o T4 total pode estar baixo; usa-se T4 livre por diálise e TSH canino para melhor acurácia.",
+        "D": "Correta.",
+        "E": "Correta."
+      },
+      "review": {
+        "fisiologia": "Síndrome do eutireoideu doente reduz T4 total sem hipotireoidismo verdadeiro. Diagnóstico de hipotireoidismo: T4 livre (diálise) baixo + TSH alto + clínica.",
+        "high_yield": [
+          "Evitar interpretar T4 total isolado em doentes sistêmicos."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-CM-0039",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["CLÍNICA MÉDICA", "SAÚDE PÚBLICA"],
+      "topic_tags": ["DERMATOLOGIA", "ZOONOSES"],
+      "difficulty": "M",
+      "cognitive_level": "Lembrar",
+      "stem": "Assinale a afirmativa CORRETA. Quais das enfermidades abaixo são consideradas dermatozoonoses?",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "Escabiose e esporotricose."},
+        {"label": "B", "text": "Esporotricose e demodiciose."},
+        {"label": "C", "text": "Pediculose canina e escabiose."},
+        {"label": "D", "text": "Leishmaniose e otoacaríase (Otodectes cynotis)."},
+        {"label": "E", "text": "Alternativas A e D estão corretas."}
+      ],
+      "answer_type": "single",
+      "answer_key": "A",
+      "rationales": {
+        "A": "Correta. Escabiose (Sarcoptes) e esporotricose são dermatozoonoses.",
+        "B": "Incorreta. Demodiciose não é zoonose.",
+        "C": "Incorreta. Pediculose canina não é zoonose relevante.",
+        "D": "Incorreta. Otoacaríase não é clássica zoonose; leishmaniose é zoonose mas não é dermatozoonose típica.",
+        "E": "Incorreta. A está correta, D não."
+      },
+      "review": {
+        "fisiologia": "Dermatozoonoses são doenças de pele transmissíveis entre animais e humanos. Sarna sarcóptica e esporotricose são exemplos clássicos.",
+        "high_yield": [
+          "Demodiciose não é zoonótica."
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-SP-0040",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022.pdf",
+      "source_pages": null,
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["ANIMAIS PEÇONHENTOS"],
+      "difficulty": "M",
+      "cognitive_level": "Entender",
+      "stem": "Em relação aos acidentes por animais peçonhentos, assinale a afirmativa CORRETA:",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "Os acidentes botrópicos e crotálicos produzem sintomas predominantemente locais."},
+        {"label": "B", "text": "O soro antibotrópico tem pouca atividade contra os efeitos necrosantes locais do veneno botrópico."},
+        {"label": "C", "text": "Os acidentes por escorpião são caracterizados por intenso edema, eritema e necrose."},
+        {"label": "D", "text": "Embora desconhecido por grande parte dos clínicos veterinários, o acidente laquético (Lachesis spp) alcança incidência próxima ao acidente botrópico."},
+        {"label": "E", "text": "No araneísmo, a distinção entre os acidentes por Loxosceles spp e por Phoneutria spp possui apenas importância acadêmica, considerando que os sintomas e tratamento são muito semelhantes."}
+      ],
+      "answer_type": "single",
+      "answer_key": "B",
+      "rationales": {}, "review": {}, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-SP-0001",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022 - SP.pdf",
+      "source_pages": null,
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["LEPTOSPIROSE", "ZOONOSES"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Com relação a Leptospirose, analise as asserções a seguir:\nO ser humano é apenas hospedeiro acidental e terminal, dentro da cadeia de transmissão.\nPORQUE\nA infecção humana resulta da exposição direta ou indireta a urina de animais infectados e a transmissão pessoa a pessoa é rara, mas pode ocorrer pelo contato com urina, sangue, secreções e tecidos de pessoas infectadas.\nCom base nas asserções, assinale a opção correta.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "As duas asserções são proposições verdadeiras e a segunda é uma justificativa correta da primeira."},
+        {"label": "B", "text": "As duas asserções são proposições verdadeiras, mas a segunda não é uma justificativa correta da primeira."},
+        {"label": "C", "text": "A primeira asserção é uma proposição verdadeira e a segunda, uma proposição falsa."},
+        {"label": "D", "text": "A primeira asserção é uma proposição falsa e a segunda, uma proposição verdadeira."},
+        {"label": "E", "text": "Tanto a primeira quanto a segunda asserções são proposições falsas."}
+      ],
+      "answer_type": "single",
+      "answer_key": "B",
+      "rationales": {
+        "A": "Incorreta. Embora as duas sentenças sejam verdadeiras, a segunda NÃO justifica a primeira.",
+        "B": "Correta. O humano é hospedeiro acidental/terminal na leptospirose, e a exposição ocorre sobretudo à urina de animais infectados; contudo, essa descrição do modo de infecção não explica o fato de o humano ser terminal.",
+        "C": "Incorreta. A primeira asserção é verdadeira.",
+        "D": "Incorreta. A primeira é verdadeira e a segunda também é verdadeira.",
+        "E": "Incorreta. Ambas as asserções são verdadeiras."
+      },
+      "review": {
+        "fisiologia": "O humano é hospedeiro acidental e terminal porque, diferentemente dos reservatórios (ex.: roedores), não mantém a eliminação ambiental eficaz e sustentada de Leptospira. A infecção humana decorre do contato direto/indireto com urina de animais infectados; a transmissão pessoa‑pessoa é rara.",
+        "high_yield": [
+          "Reservatório principal: roedores; eliminação crônica renal",
+          "Transmissão humana: água/solo contaminados; pele lesada ou mucosas",
+          "Transmissão pessoa‑pessoa é rara (contato com fluidos)"
+        ],
+        "pegadinhas": [
+          "Confundir 'modo de infecção' com 'razão de ser terminal'",
+          "Assumir que pessoa‑pessoa é comum"
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-SP-0002",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022 - SP.pdf",
+      "source_pages": null,
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["CONTROLE DE ROEDORES", "SANEAMENTO"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Em relação aos roedores, a estratégia de controle será definida com base no conhecimento prévio da biologia e do comportamento dos roedores, de acordo com seus habitats em cada área (domiciliar, peridomiciliar ou silvestre). Dessa forma, o controle pode abranger duas linhas de ação, a antirratização e a desratização. Sobre a antirratização, analise as afirmações e assinale a alternativa INCORRETA.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "Eliminar todos os resíduos, entulhos e objetos inúteis que possam servir para abrigos, tocas e ninhos de roedores, bem como reduzir suas fontes de água e alimento."},
+        {"label": "B", "text": "Armazenar insumos e produtos agrícolas (grãos, hortigranjeiros e frutas) em silos ou tulhas situados a uma distância mínima de 30 m do domicílio."},
+        {"label": "C", "text": "Caso não exista coleta regular, os lixos orgânicos e inorgânicos devem ser enterrados separadamente, com adição de raticidas ao lixo orgânico, para impedir a proliferação dos roedores."},
+        {"label": "D", "text": "Remover diariamente, no período noturno, as sobras dos alimentos de animais domésticos."},
+        {"label": "E", "text": "Os produtos armazenados no interior dos domicílios devem ser conservados em recipientes fechados e a 40 cm do solo. Essa altura é necessária para se realizar a limpeza com maior facilidade."}
+      ],
+      "answer_type": "single",
+      "answer_key": "C",
+      "rationales": {
+        "A": "Correta. Medida clássica de antirratização (ambiente desfavorável).",
+        "B": "Correta. Armazenamento adequado e distante do domicílio.",
+        "C": "Incorreta. Enterrar lixo com adição de raticida é perigoso e incorreto (risco ambiental e de intoxicação).",
+        "D": "Correta. Retirar alimento disponível aos roedores.",
+        "E": "Correta. Armazenamento vedado e elevado facilita higiene e reduz acesso."
+      },
+      "review": {
+        "fisiologia": "Antirratização = saneamento ambiental (eliminar abrigo, água e alimento). Desratização = controle químico/físico. Adicionar raticida ao lixo enterrado é prática insegura e não recomendada.",
+        "high_yield": [
+          "Priorizar manejo ambiental antes de venenos",
+          "Armazenar alimentos vedados e elevados",
+          "Retirar ração noturna dos animais domésticos"
+        ],
+        "pegadinhas": [
+          "Confundir antirratização (ambiente) com desratização (veneno)"
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-SP-0004",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022 - SP.pdf",
+      "source_pages": null,
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["RAIVA", "CICLOS DE TRANSMISSÃO"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Por finalidade didática, considera-se que a cadeia epidemiológica da doença apresenta quatro ciclos de transmissão: urbano, rural, silvestre aéreo e silvestre terrestre. Sobre os ciclos de transmissão da Raiva, analise as afirmações a seguir.\nI. No Brasil, caninos e felinos constituem as principais fontes de infecção nas áreas urbanas.\nII. Na zona rural, a doença afeta animais de produção, como bovinos, equinos, caprinos e ovinos.\nIII. Os quirópteros (morcegos) são os responsáveis pela manutenção do ciclo silvestre aéreo.\nIV. Carnívoros silvestres, marsupiais e primatas apresentam importância epidemiológica nos ciclos silvestres terrestre da raiva.\nV. O ciclo rural é passível de eliminação, por dispor de medidas eficientes de prevenção, tanto em relação ao homem quanto à fonte de infecção.\nCom relação as afirmações, é correto apenas o que se afirma em:",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "I e II"},
+        {"label": "B", "text": "IV e V"},
+        {"label": "C", "text": "I, IV e V"},
+        {"label": "D", "text": "I, II, III e IV"},
+        {"label": "E", "text": "I, II, IV e V"}
+      ],
+      "answer_type": "single",
+      "answer_key": "D",
+      "rationales": {
+        "A": "Parcial. I é verdadeira, mas V é falsa.",
+        "B": "Incorreta. V é falsa.",
+        "C": "Incorreta. V é falsa; III também deve constar entre as corretas.",
+        "D": "Correta. I, II, III e IV estão corretas.",
+        "E": "Incorreta. V é falsa."
+      },
+      "review": {
+        "fisiologia": "Ciclos: urbano (cães/gatos), rural (herbívoros acometidos por morcegos hematófagos), silvestre aéreo (morcegos reservatórios) e silvestre terrestre (carnívoros/primatas/marsupiais). O ciclo rural não é eliminável devido ao reservatório silvestre (morcegos).",
+        "high_yield": [
+          "Hoje, morcegos são o principal reservatório",
+          "Ciclo rural depende do silvestre aéreo",
+          "Eliminação é inviável quando há reservatório silvestre"
+        ],
+        "pegadinhas": [
+          "Achar que o ciclo rural é eliminável"
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-SP-0005",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022 - SP.pdf",
+      "source_pages": null,
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["RAIVA", "VIGILÂNCIA EPIDEMIOLÓGICA"],
+      "difficulty": "F",
+      "cognitive_level": "Análise",
+      "stem": "Com relação a raiva, muita atenção é dada as condutas após agressões causadas por cães e gatos, analise as asserções a seguir:\nMesmo se o animal estiver sadio no momento da agressão (acidente), é importante que seja mantido em observação por dez dias.\nPORQUE\nNos cães e nos gatos a eliminação de vírus pela saliva ocorre de dois a cinco dias antes do aparecimento dos sinais clínicos e persiste durante toda a evolução da doença. A morte do animal acontece, em média, entre cinco e sete dias após a apresentação dos sintomas.\nCom base nas asserções, assinale a opção correta.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "As duas asserções são proposições verdadeiras e a segunda é uma justificativa correta da primeira."},
+        {"label": "B", "text": "As duas asserções são proposições verdadeiras, mas a segunda não é uma justificativa correta da primeira."},
+        {"label": "C", "text": "A primeira asserção é uma proposição verdadeira e a segunda, uma proposição falsa."},
+        {"label": "D", "text": "A primeira asserção é uma proposição falsa e a segunda, uma proposição verdadeira."},
+        {"label": "E", "text": "Tanto a primeira quanto a segunda asserções são proposições falsas."}
+      ],
+      "answer_type": "single",
+      "answer_key": "A",
+      "rationales": {
+        "A": "Correta. A eliminação salivar antecede em poucos dias os sinais; 10 dias de observação garantem segurança.",
+        "B": "Incorreta. A segunda asserção justifica a primeira.",
+        "C": "Incorreta. A segunda é verdadeira.",
+        "D": "Incorreta. A primeira é verdadeira.",
+        "E": "Incorreta. Ambas são verdadeiras."
+      },
+      "review": {
+        "fisiologia": "O vírus da raiva atinge as glândulas salivares pouco antes dos sinais clínicos e o curso é rapidamente fatal. Animal agressor sadio por 10 dias no pós‑acidente não transmitia no momento da agressão.",
+        "high_yield": [
+          "Período de observação de 10 dias",
+          "Eliminação viral 2–5 dias antes dos sinais",
+          "Conduta humana depende do desfecho da observação"
+        ],
+        "pegadinhas": [
+          "Interromper observação antes de 10 dias"
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    },
+    {
+      "id": "UFV-2022-SP-0006",
+      "year": 2023,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2022 - SP.pdf",
+      "source_pages": null,
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["ARBOVIROSES", "AEDES AEGYPTI"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Os três arbovírus podem ser transmitidos ao homem por via vetorial, vertical e transfusional. A principal forma é a vetorial, que ocorre pela picada de fêmeas de Aedes aegypti infectadas, no ciclo humano-vetor-humano. Ainda sobre o vetor Aedes aegypti, assinale a alternativa INCORRETA.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "Na natureza, esses três arbovírus são mantidos entre mosquitos Aedes aegypti, principalmente por intermédio da transmissão transovariana."},
+        {"label": "B", "text": "O vetor Aedes aegypti pode se infectar ao picar uma pessoa infectada no período virêmico, dando início ao Período de Incubação Extrínseco (PIE)."},
+        {"label": "C", "text": "Apesar de realizar a amplificação do vírus na natureza, Aedes aegypti não pode ser considerado um reservatório dos arbovírus, uma vez que o mosquito não desenvolve a forma clínica da doença."},
+        {"label": "D", "text": "O Período de Incubação Extrínseco (PIE) corresponde ao tempo decorrido desde a ingestão de sangue virêmico, pelo mosquito Aedes aegypti suscetível, até o surgimento do vírus na saliva do inseto."},
+        {"label": "E", "text": "Após o Período de Incubação Extrínseco (PIE), o mosquito Aedes aegypti permanece infectante até o final da sua vida, sendo capaz de transmitir o vírus para o homem."}
+      ],
+      "answer_type": "single",
+      "answer_key": "C",
+      "rationales": {
+        "A": "Incorreta. A manutenção principal em epidemias é o ciclo humano‑vetor; transovariana existe, mas não é a via principal.",
+        "B": "Correta. Início do PIE ao picar humano virêmico.",
+        "C": "Incorreta (no enunciado). O Aedes também funciona como reservatório; negar isso é erro conceitual.",
+        "D": "Correta. Definição de PIE.",
+        "E": "Correta. Após o PIE, o vetor permanece infectante até o fim da vida."
+      },
+      "review": {
+        "fisiologia": "Aedes aegypti é vetor competente e, considerando a transmissão vertical, contribui como reservatório. PIE encurta com temperaturas mais altas; após o PIE, o mosquito transmite até o final da vida.",
+        "high_yield": [
+          "PIE: sangue virêmico → replicação → glândulas salivares",
+          "Transovariana: persistência entre safras, não motor principal de epidemias",
+          "Vetor infectante por toda a vida"
+        ],
+        "pegadinhas": [
+          "Tratar transovariana como principal via de manutenção",
+          "Negar papel de reservatório do vetor"
+        ]
+      }, "provenance": {}, "status": "approved", "version": 1, "issues": []
+    }
+  ]
+}

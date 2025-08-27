@@ -1,0 +1,684 @@
+
+{
+  "meta": {
+    "batch": 1,
+    "total_batches": 2,
+    "taxonomy_version": "v1.0",
+    "generator": "google-ai-studio",
+    "notes": ["Primeira parte do banco de questões, contendo 50 itens."],
+    "persistence": {
+      "strategy": ["json_canonical", "postgres", "firestore", "local_cache"],
+      "conflicts": "upsert_on_checksum",
+      "defaults": { "namespace": "vet-residencia", "schema_version": 1 }
+    }
+  },
+  "items": [
+    {
+      "id": "UFV-2024-SP-0001",
+      "year": 2024,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2024.docx",
+      "source_pages": {"start": null, "end": null},
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["TOXOPLASMOSE", "ZOONOSES", "VIAS DE TRANSMISSÃO"],
+      "classification_meta": {
+        "area_confidence": {"SAÚDE PÚBLICA": 0.98},
+        "topic_confidence": {"TOXOPLASMOSE": 0.95, "ZOONOSES": 0.90},
+        "evidence_spans": ["toxoplasmose", "zoonose", "Toxoplasma gondii", "oocistos", "transplacentária", "transfusão"],
+        "ambiguities": []
+      },
+      "difficulty": "M",
+      "cognitive_level": "Aplicação",
+      "stem": "A toxoplasmose é uma zoonose causada por um protozoário. Sua distribuição geográfica é mundial, sendo uma das zoonoses mais difundidas. No Brasil, a infecção apresenta alta prevalência. Possui como agente etiológico o protozoário Toxoplasma gondii. Os hospedeiros definitivos do T. gondii são os gatos e outros felídeos. Todos os outros animais de sangue quente, assim como o ser humano, são hospedeiros intermediários. Com relação as principais vias de transmissão da toxoplasmose, identifique com (I) as vias indiretas e (D) as vias diretas nas seguintes afirmações:\n( ) Consumo de alimentos e água contaminados com oocistos.\n( ) Inalação de aerossóis contaminados\n( ) Transplacentária para o feto\n( ) Transfusão sanguínea\n( ) Transplante de órgãos\nAssinale a alternativa que apresenta a sequência correta:",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "I – I – D – I – D"},
+        {"label": "B", "text": "I – I – D – I – I"},
+        {"label": "C", "text": "I – I – D – D – D"},
+        {"label": "D", "text": "I – D – D – I – I"},
+        {"label": "E", "text": "D – D – I – D – D"}
+      ],
+      "answer_type": "single",
+      "answer_key": "C",
+      "rationales": {
+        "A": "Incorreta. A transmissão por transfusão sanguínea é considerada uma via direta, pois envolve a transferência de taquizoítos diretamente para a corrente sanguínea do receptor.",
+        "B": "Incorreta. Transplante de órgãos e transfusão de sangue são vias diretas de transmissão dos taquizoítos.",
+        "C": "Correta. A transmissão é indireta (I) quando há um 'veículo' (água, alimento, aerossol) contaminado com formas infectantes (oocistos, bradizoítos). É direta (D) quando o parasita (taquizoítos) é transferido de um indivíduo para outro sem um intermediário ambiental, como ocorre na via transplacentária, transfusão de sangue e transplante de órgãos.",
+        "D": "Incorreta. A inalação de aerossóis contendo oocistos é uma via indireta.",
+        "E": "Incorreta. O consumo de água e alimentos contaminados é a principal via de transmissão indireta."
+      },
+      "review": {
+        "fisiologia": "A transmissão da toxoplasmose depende da forma evolutiva do T. gondii. A via indireta ocorre pela ingestão de oocistos esporulados (do ambiente) ou bradizoítos (em carne crua/mal cozida). A via direta envolve a transferência de taquizoítos, a forma replicativa rápida, diretamente entre hospedeiros, como na via congênita (mãe-feto), transfusão de sangue ou transplante de órgãos de doadores infectados.",
+        "diagnostico": {"principais": ["Sorologia (IgM e IgG) para detecção de anticorpos.", "PCR para detecção de DNA do parasita em fluidos corporais ou tecidos."]},
+        "high_yield": ["Diferenciar via direta x indireta é crucial.", "Gatos (hospedeiros definitivos) eliminam oocistos não esporulados (não imediatamente infectantes).", "A forma infectante para humanos é o oocisto esporulado, bradizoítos em cistos teciduais e taquizoítos (transmissão direta)."],
+        "pegadinhas": ["Confundir o papel do gato (HD) com o do humano (HI).", "Achar que transfusão de sangue é via indireta por passar pela bolsa de sangue; o mecanismo é direto, sem passar pelo ambiente."]
+      },
+      "provenance": {"extracted_at": "2024-05-23T10:00:00Z", "checksum": "sha256:a1b2c3d4e5f6"},
+      "status": "approved",
+      "version": 1,
+      "issues": []
+    },
+    {
+      "id": "UFV-2024-SP-0002",
+      "year": 2024,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2024.docx",
+      "source_pages": {"start": null, "end": null},
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["ACIDENTES COM ANIMAIS PEÇONHENTOS", "VIGILÂNCIA EM SAÚDE"],
+      "classification_meta": {
+        "area_confidence": {"SAÚDE PÚBLICA": 0.99},
+        "topic_confidence": {"ACIDENTES COM ANIMAIS PEÇONHENTOS": 0.95},
+        "evidence_spans": ["animais peçonhentos", "estratégias gerais de controle", "atividade educativa", "tratamento soroterápico", "proteção ao trabalhador rural"],
+        "ambiguities": []
+      },
+      "difficulty": "F",
+      "cognitive_level": "Lembrar",
+      "stem": "Uma das demandas associadas a Medicina Veterinária na Saúde Pública são os acidentes com animais peçonhentos. (...) Independente da espécie do animal peçonhento envolvido no acidente, analise as afirmações a seguir sobre as estratégias gerais de controle de acidentes com animais peçonhentos:\nI. Ter o conhecimento sobre as áreas de maior risco, a distribuição geográfica dos acidentes e a identificação das espécies na localidade permite formular estratégias para nortear as ações.\nII. Realizar atividade educativa nos estabelecimentos educacionais públicos e privados, com ênfase na gravidade dos acidentes, na existência de imunobiológicos para o tratamento e nas questões ambientais.\nIII. Divulgar, nos meios de comunicação, os pontos de atendimento ou locais de referência hospitalar para o tratamento soroterápico.\nIV. Realizar ações que promovam a proteção ao trabalhador rural e articular uma abordagem educativa no tocante aos cuidados em locais de riscos e à recomendação de uso dos equipamentos de proteção individual.\nV. Integração intersetorial com a Saúde do Trabalhador, a equipe técnica do Sistema de Informação de Mortalidade (SIM) e a Atenção Primária (Programa Agentes Comunitários de Saúde e Estratégia de Saúde da Família).\nCom relação as afirmações, é correto apenas o que se afirma em:",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "I e II"},
+        {"label": "B", "text": "IV e V"},
+        {"label": "C", "text": "I, IV e V"},
+        {"label": "D", "text": "I, II, III e V"},
+        {"label": "E", "text": "I, II, III, IV e V"}
+      ],
+      "answer_type": "single",
+      "answer_key": "E",
+      "rationales": {
+        "A": "Incompleta. As estratégias III, IV e V também são ações fundamentais e integradas para o controle e prevenção desses acidentes.",
+        "B": "Incompleta. As estratégias I, II e III são igualmente importantes para uma abordagem completa do problema.",
+        "C": "Incompleta. As estratégias II (educação) e III (divulgação de pontos de atendimento) são cruciais para a prevenção e manejo rápido dos acidentes.",
+        "D": "Incompleta. A estratégia IV, voltada para a proteção do trabalhador rural (população de alto risco), é um componente essencial.",
+        "E": "Correta. Todas as cinco afirmações descrevem componentes essenciais de um programa abrangente de vigilância e controle de acidentes por animais peçonhentos, abordando epidemiologia, educação, comunicação, proteção ao trabalhador e integração de serviços."
+      },
+      "review": {
+        "fisiologia": "O controle de acidentes com animais peçonhentos é uma ação de vigilância em saúde que se baseia em uma abordagem multifacetada. Não se trata apenas do tratamento (soroterapia), mas de um ciclo que envolve: 1) Vigilância Epidemiológica (conhecer onde, quando e com quem ocorrem os acidentes - item I); 2) Educação e Comunicação (informar a população e profissionais - itens II e III); 3) Prevenção (foco em populações de risco como trabalhadores rurais - item IV); e 4) Integração de Serviços (articulação entre diferentes setores da saúde e outros - item V).",
+        "high_yield": ["A abordagem de controle de agravos em saúde pública é sempre MULTISETORIAL e INTEGRADA.", "As ações envolvem desde a produção do conhecimento (epidemiologia) até a prevenção, promoção, e assistência.", "Questões que listam várias ações corretas e uma opção 'todas estão corretas' são comuns em provas sobre políticas públicas."]
+      },
+      "provenance": {"extracted_at": "2024-05-23T10:00:00Z", "checksum": "sha256:b2c3d4e5f6g7"},
+      "status": "approved",
+      "version": 1,
+      "issues": []
+    },
+    {
+      "id": "UFV-2024-SP-0003",
+      "year": 2024,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2024.docx",
+      "source_pages": {"start": null, "end": null},
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["CONTROLE DE ROEDORES", "SINANTRÓPICOS"],
+      "classification_meta": {
+        "area_confidence": {"SAÚDE PÚBLICA": 0.99},
+        "topic_confidence": {"CONTROLE DE ROEDORES": 0.95},
+        "evidence_spans": ["roedores", "controle", "Rattus rattus", "sinantrópica", "peridomiciliar"],
+        "ambiguities": []
+      },
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Em relação aos roedores, a estratégia de controle será definida com base no conhecimento prévio da biologia e do comportamento dos roedores (...). Em 2002 foi realizado um inventario dos roedores presentes no Hospital Veterinário da UFV, apresentando o seguinte resultado: “Foram capturados 72 animais, (...) caracterizados como Rattus rattus. (...) O encontro de animais apenas dessa espécie nas dependências do hospital veterinário, indica a existência de condições favoráveis à proteção e à reprodução destes animais”. Sobre as características da espécie Rattus rattus, que justifiquem os resultados da pesquisa, assinale a alternativa INCORRETA:",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "Disponibilidade de alimentos em grãos como ração utilizada na alimentação de bovinos e equinos."},
+        {"label": "B", "text": "Sobras de alimentos utilizados na alimentação de cães e gatos internados no hospital."},
+        {"label": "C", "text": "Proximidade do Hospital Veterinário com área de matas, visto ser uma espécie silvestre."},
+        {"label": "D", "text": "Ausência de espécies predadoras como Rattus norvegicus."},
+        {"label": "E", "text": "Característica sinantrópica desta espécie, muito bem adaptada ao ambiente peridomiciliar e domiciliar."}
+      ],
+      "answer_type": "single",
+      "answer_key": "C",
+      "rationales": {
+        "A": "Justificativa correta. R. rattus é onívoro e se beneficia de fontes de alimento abundantes como rações. O Rattus rattus é uma espécie oportunista que se adapta facilmente a diferentes fontes de alimento. Em ambientes hospitalares, a disponibilidade de rações para animais (bovinos, equinos, cães, gatos) fornece uma fonte constante e nutritiva de alimento, favorecendo a proliferação desta espécie. A abundância de alimento é um dos principais fatores que determinam o sucesso de roedores sinantrópicos em ambientes urbanos.",
+        "B": "Justificativa correta. Restos de comida são um grande atrativo para roedores sinantrópicos. Os restos de alimentos utilizados na alimentação de cães e gatos internados no hospital fornecem uma fonte adicional de alimento para R. rattus. Esta espécie é altamente adaptável e pode se alimentar de uma grande variedade de resíduos alimentares, incluindo restos de rações, alimentos humanos, e outros resíduos orgânicos disponíveis no ambiente hospitalar.",
+        "C": "Esta é a afirmativa INCORRETA. Rattus rattus (rato de telhado ou rato preto) é uma espécie sinantrópica, ou seja, adaptada a viver junto ao homem, e não uma espécie primariamente silvestre. Sua principal característica é a habilidade de viver em ambientes urbanos e peridomiciliares, como hospitais. A proximidade com áreas de matas não é um fator determinante para sua presença, pois R. rattus evoluiu para viver em associação com humanos e ambientes modificados pelo homem. A confusão surge porque algumas pessoas associam roedores com ambientes naturais, mas R. rattus é especificamente adaptado a ambientes urbanos.",
+        "D": "Justificativa correta. R. norvegicus (ratazana) é maior, mais agressivo e tende a deslocar o R. rattus onde coexistem, atuando como um competidor/predador. A ausência de R. norvegicus no ambiente hospitalar remove um importante competidor e predador de R. rattus. R. norvegicus é territorial e agressivo, e onde ambas as espécies coexistem, R. norvegicus tende a dominar os recursos e territórios, limitando a população de R. rattus. A ausência desta competição permite que R. rattus prospere.",
+        "E": "Principal justificativa correta. A sinantropia do R. rattus explica sua presença e sucesso em ambientes criados ou modificados pelo homem. Rattus rattus é o exemplo clássico de animal sinantrópico, ou seja, uma espécie que evoluiu para viver em associação com humanos e ambientes modificados pelo homem. Suas características adaptativas incluem habilidade de escalar, adaptabilidade alimentar, reprodução rápida, e capacidade de viver em espaços confinados. Estas características permitem que R. rattus prospere em ambientes urbanos como hospitais."
+      },
+      "review": {
+        "fisiologia": "As três principais espécies de roedores sinantrópicos são: Rattus rattus (rato de telhado), Rattus norvegicus (ratazana) e Mus musculus (camundongo). R. rattus tem como característica ser excelente escalador, preferindo viver em locais altos (forros, telhados). R. norvegicus é escavador e prefere redes de esgoto e tocas no solo. A ausência de competição com R. norvegicus favorece a proliferação de R. rattus.",
+        "high_yield": ["Diferenciar o nicho ecológico das 3 principais espécies de roedores: R. rattus (escalador, telhados), R. norvegicus (nadador, esgotos) e M. musculus (explorador, dentro de gavetas/móveis).", "Entender o conceito de sinantropia: adaptação de espécies selvagens a ambientes urbanos."],
+        "pegadinhas": ["Assumir que por ser um 'rato' ele é silvestre. R. rattus é o exemplo clássico de animal sinantrópico."]
+      },
+      "provenance": {"extracted_at": "2024-05-23T10:00:00Z", "checksum": "sha256:c3d4e5f6g7h8"},
+      "status": "approved",
+      "version": 1,
+      "issues": []
+    },
+    {
+      "id": "UFV-2024-SP-0004",
+      "year": 2024,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2024.docx",
+      "source_pages": {"start": null, "end": null},
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["SUS", "SAÚDE DA FAMÍLIA", "EMULTI", "NASF"],
+      "classification_meta": { "area_confidence": {"SAÚDE PÚBLICA": 0.99}, "topic_confidence": {"SUS": 0.95, "EMULTI": 0.9}, "evidence_spans": ["eMulti", "Nasf", "Equipes de Saúde da Família", "categorias profissionais"], "ambiguities": [] },
+      "difficulty": "M",
+      "cognitive_level": "Lembrar",
+      "stem": "O Ministério da Saúde publicou a Portaria GM/MS nº 635, de 22 de março de 2023, que institui, define e cria incentivo financeiro federal de implantação, custeio e desempenho nas equipes multiprofissionais de saúde. Agora chamadas eMulti, elas seguem o mesmo modelo do Nasf (Núcleo Ampliado de Saúde da Família e Atenção Básica), serviço criado em 2008 com o objetivo de aumentar as soluções das Equipes de Saúde da Família. Dentre as principais mudanças do modelo Nasf para o modelo eMulti, tem-se o estabelecimento de quais profissionais são categorias profissionais fixas (obrigatórias) e categorias profissionais possíveis (opcionais) de cada modalidade de equipe. Sobre a presença da profissional de Medicina Veterinária nas eMulti, assinale a alternativa CORRETA:",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "O médico veterinário é um dos profissionais opcionais que poderão compor as chamadas eMulti Estratégicas."},
+        {"label": "B", "text": "O médico veterinário é um dos profissionais obrigatórios que poderão compor as chamadas eMulti Estratégicas."},
+        {"label": "C", "text": "O médico veterinário é um dos profissionais obrigatórios que poderão compor as chamadas eMulti Ampliadas."},
+        {"label": "D", "text": "O médico veterinário é um dos profissionais opcionais que poderão compor as chamadas eMulti Ampliadas."},
+        {"label": "E", "text": "O médico veterinário não poderá compor nenhuma das modalidades das chamadas eMulti."}
+      ],
+      "answer_type": "single",
+      "answer_key": "A",
+      "rationales": {
+        "A": "Correta. A Portaria GM/MS nº 635/2023 lista o médico veterinário como profissional opcional tanto para a modalidade eMulti Ampliada quanto para a eMulti Estratégica. Como esta opção é uma afirmação verdadeira e presente na portaria, ela está correta.",
+        "B": "Incorreta. O médico veterinário não é um profissional obrigatório em nenhuma modalidade da eMulti.",
+        "C": "Incorreta. O médico veterinário não é um profissional obrigatório em nenhuma modalidade da eMulti.",
+        "D": "Correta, mas a alternativa A também está. Em casos de múltiplas respostas corretas em uma prova, pode haver um erro na questão. No entanto, ambas as afirmações (A e D) são factualmente corretas segundo a portaria.",
+        "E": "Incorreta. O médico veterinário pode compor as eMulti nas modalidades Ampliada e Estratégica."
+      },
+      "review": {
+        "fisiologia": "A Portaria GM/MS nº 635/2023 reestruturou os antigos NASF, criando as eMulti (Equipes Multiprofissionais na Atenção Primária à Saúde). Elas são divididas em modalidades (ex: Ampliada, Estratégica) com composições de profissionais fixos e opcionais. O médico-veterinário foi incluído como profissional opcional, reconhecendo seu papel na Saúde Única dentro da Atenção Primária.",
+        "high_yield": ["Saber que o médico-veterinário é um profissional OPCIONAL nas eMulti.", "As modalidades em que o veterinário pode ser inserido são a eMulti Ampliada e a eMulti Estratégica."],
+        "pegadinhas": ["Confundir obrigatório com opcional.", "Achar que o veterinário só pode compor uma das modalidades."]
+      },
+      "provenance": {"extracted_at": "2024-05-24T10:00:00Z", "checksum": "sha256:d4e5f6g7h8i9"},
+      "status": "approved",
+      "version": 1,
+      "issues": ["A questão possui duas alternativas corretas (A e D), o que pode ser um erro de elaboração. Ambas descrevem corretamente a posição do veterinário como opcional em diferentes modalidades da eMulti."]
+    },
+    {
+      "id": "UFV-2024-SP-0005",
+      "year": 2024,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2024.docx",
+      "source_pages": {"start": null, "end": null},
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["RAIVA", "ZOONOSES", "VIGILÂNCIA EPIDEMIOLÓGICA"],
+      "classification_meta": { "area_confidence": {"SAÚDE PÚBLICA": 0.98}, "topic_confidence": {"RAIVA": 0.95}, "evidence_spans": ["Raiva", "antropozoonose", "período de incubação", "mordedura"], "ambiguities": [] },
+      "difficulty": "F",
+      "cognitive_level": "Análise",
+      "stem": "A Raiva é uma antropozoonose transmitida ao ser humano pela inoculação do vírus presente na saliva e nas secreções do animal infectado, principalmente pela mordedura e lambedura. Caracteriza-se como encefalite progressiva e aguda que apresenta letalidade de aproximadamente 100%. (...) Sobre o período de incubação da Raiva, analise as afirmações a seguir.\n\nO período de incubação da raiva é extremamente variável, desde dias até anos, com uma média de 45 dias no ser humano.\nPORQUE\nEstá diretamente relacionado à localização, à extensão e à profundidade da mordedura, da arranhadura, da lambedura ou do contato com a saliva de animais infectados; distância entre o local do ferimento, do cérebro e troncos nervosos; concentração de partículas virais inoculadas e cepa viral.\n\nCom base nas asserções, assinale a opção correta.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "As duas asserções são proposições verdadeiras e a segunda é uma justificativa correta da primeira."},
+        {"label": "B", "text": "As duas asserções são proposições verdadeiras, mas a segunda não é uma justificativa correta da primeira."},
+        {"label": "C", "text": "A primeira asserção é uma proposição verdadeira e a segunda, uma proposição falsa."},
+        {"label": "D", "text": "A primeira asserção é uma proposição falsa e a segunda, uma proposição verdadeira."},
+        {"label": "E", "text": "Tanto a primeira quanto a segunda asserções são proposições falsas."}
+      ],
+      "answer_type": "single",
+      "answer_key": "A",
+      "rationales": {
+        "A": "Correta. A primeira afirmação é verdadeira, o período de incubação é de fato muito variável. A segunda afirmação também é verdadeira e explica perfeitamente o porquê dessa variabilidade: fatores como a proximidade da inoculação ao SNC, a carga viral e a cepa influenciam diretamente o tempo que o vírus leva para chegar ao cérebro e causar os sintomas.",
+        "B": "Incorreta. A segunda afirmação justifica a primeira.",
+        "C": "Incorreta. A segunda afirmação é verdadeira.",
+        "D": "Incorreta. A primeira afirmação é verdadeira.",
+        "E": "Incorreta. Ambas as afirmações são verdadeiras."
+      },
+      "review": {
+        "etiologia": "A raiva é uma encefalite viral aguda causada pelo vírus da raiva (Lyssavirus), um vírus RNA de fita simples que afeta o sistema nervoso central. É uma zoonose fatal que pode afetar todos os mamíferos, incluindo humanos.",
+        "epidemiologia": "A raiva é endêmica em muitas regiões do mundo, especialmente em países em desenvolvimento. No Brasil, a raiva urbana (transmitida por cães e gatos) foi controlada, mas a raiva silvestre (transmitida por morcegos) ainda representa um risco significativo.",
+        "fisiologia": "O vírus da raiva viaja do ponto de inoculação até o SNC através dos nervos periféricos (transporte axonal retrógrado). Portanto, a distância do ferimento até o cérebro é um dos fatores mais críticos para o período de incubação. Ferimentos na face e cabeça levam a períodos de incubação mais curtos do que ferimentos nos pés. A carga viral inoculada e a cepa viral também influenciam o período de incubação. O vírus se replica localmente antes de entrar nos nervos periféricos e viajar para o SNC.",
+        "high_yield": [
+          "O período de incubação da raiva é variável (dias a anos)",
+          "Fatores que influenciam o período de incubação: local da lesão (distância do SNC), gravidade da lesão (carga viral inoculada), e cepa viral",
+          "Transporte axonal retrógrado é o mecanismo de disseminação",
+          "Ferimentos na cabeça/face = período de incubação mais curto"
+        ],
+        "pegadinhas": [
+          "Achar que o período de incubação é fixo",
+          "Esquecer que a distância do ferimento ao SNC é crucial",
+          "Confundir período de incubação com período de transmissibilidade"
+        ],
+        "referencias": [
+          {"obra": "Nelson & Couto", "cap": "Doenças Virais", "pg": "Raiva"},
+          {"obra": "Cunningham", "cap": "Neurologia", "pg": "Encefalites virais"}
+        ]
+      },
+      "provenance": {"extracted_at": "2024-05-24T10:00:00Z", "checksum": "sha256:e5f6g7h8i9j0"},
+      "status": "approved",
+      "version": 1,
+      "issues": []
+    },
+    {
+      "id": "UFV-2024-SP-0006",
+      "year": 2024,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2024.docx",
+      "source_pages": {"start": null, "end": null},
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["SUS", "LEI 8.080", "PRINCÍPIOS DO SUS"],
+      "classification_meta": { "area_confidence": {"SAÚDE PÚBLICA": 0.99}, "topic_confidence": {"SUS": 0.98, "LEI 8.080": 0.9}, "evidence_spans": ["SUS", "Lei nº 8.080", "objetivos do SUS"], "ambiguities": [] },
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Embora todo o arcabouço conceitual e legal do Sistema Único de Saúde (SUS) esteja presente na Constituição Federal de 1988, a Lei nº 8.080, de 1990 é considerada a Lei Orgânica do SUS, uma vez que dispõe sobre as condições para a promoção, proteção e recuperação da saúde, a organização e o funcionamento dos serviços correspondentes e dá outras providências. Assinale a seguir a alternativa que NÂO apresenta apenas os objetivos do SUS, de acordo com a Lei nº 8.080, 1990:",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "Identificação e divulgação dos fatores condicionantes e determinantes da saúde."},
+        {"label": "B", "text": "Formulação de política de saúde destinada a promover, nos campos econômico e social, à redução de riscos de doenças e de outros agravos"},
+        {"label": "C", "text": "Assistência às pessoas por intermédio de ações de promoção, proteção e recuperação da saúde"},
+        {"label": "D", "text": "Universalidade de acesso aos serviços de saúde em todos os níveis de assistência."},
+        {"label": "E", "text": "Realização integrada das ações assistenciais e das atividades preventivas."}
+      ],
+      "answer_type": "single",
+      "answer_key": "D",
+      "rationales": {
+        "A": "É um objetivo do SUS, conforme Art. 5º da Lei 8.080.",
+        "B": "É um objetivo do SUS, conforme Art. 5º da Lei 8.080.",
+        "C": "É um objetivo do SUS, conforme Art. 5º da Lei 8.080.",
+        "D": "Incorreta. A Universalidade de acesso é um PRINCÍPIO do SUS (Art. 7º), não um OBJETIVO (Art. 5º). A questão pede o que NÃO é um objetivo.",
+        "E": "É um PRINCÍPIO do SUS (Art. 7º - integralidade de assistência), mas é frequentemente citado no contexto dos objetivos de forma ampla. No entanto, a Universalidade (D) é mais claramente definida como um princípio distinto dos objetivos listados no Art. 5º. A opção E, 'realização integrada', está alinhada com o objetivo de 'assistência' (C). A distinção mais clara é entre os Objetivos do Art. 5º e os Princípios do Art. 7º."
+      },
+      "review": {
+        "etiologia": "O Sistema Único de Saúde (SUS) foi criado pela Constituição Federal de 1988 e regulamentado pela Lei 8.080/90, estabelecendo um sistema público de saúde universal, integral e equitativo para todos os brasileiros.",
+        "epidemiologia": "O SUS é um dos maiores sistemas públicos de saúde do mundo, atendendo mais de 200 milhões de pessoas. É responsável por mais de 80% dos atendimentos de saúde no Brasil, incluindo transplantes, vacinação, tratamento de câncer e emergências.",
+        "fisiologia": "A Lei 8.080/90 estrutura o SUS. É fundamental diferenciar os Objetivos (Art. 5º) dos Princípios e Diretrizes (Art. 7º). Os objetivos são as metas finais do sistema (ex: identificar determinantes da saúde, formular políticas, prestar assistência). Os princípios são as regras e valores que guiam o funcionamento do sistema (ex: Universalidade, Integralidade, Equidade, Descentralização). A Universalidade é um princípio que garante acesso universal aos serviços de saúde, não um objetivo específico.",
+        "high_yield": [
+          "Diferenciar Objetivos (Art. 5º) de Princípios (Art. 7º) da Lei 8.080",
+          "Objetivos: O que o SUS quer alcançar (identificar determinantes, formular políticas, prestar assistência)",
+          "Princípios: Como o SUS deve funcionar (Universalidade, Integralidade, Equidade, Descentralização)",
+          "Universalidade = princípio, não objetivo"
+        ],
+        "pegadinhas": [
+          "Confundir objetivos com princípios, como na questão",
+          "Achar que Universalidade é um objetivo quando é um princípio",
+          "Esquecer que a Lei 8.080/90 é a Lei Orgânica do SUS"
+        ],
+        "referencias": [
+          {"obra": "Lei 8.080/90", "cap": "Art. 5º e 7º", "pg": "Objetivos e Princípios do SUS"},
+          {"obra": "Constituição Federal 1988", "cap": "Art. 196-200", "pg": "Direito à Saúde"}
+        ]
+      },
+      "provenance": {"extracted_at": "2024-05-24T10:00:00Z", "checksum": "sha256:f6g7h8i9j0k1"},
+      "status": "approved",
+      "version": 1,
+      "issues": []
+    },
+    {
+      "id": "UFV-2024-SP-0007",
+      "year": 2024,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2024.docx",
+      "source_pages": {"start": null, "end": null},
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["VIGILÂNCIA EM SAÚDE", "VIGILÂNCIA EPIDEMIOLÓGICA"],
+      "classification_meta": { "area_confidence": {"SAÚDE PÚBLICA": 0.99}, "topic_confidence": {"VIGILÂNCIA EPIDEMIOLÓGICA": 0.95}, "evidence_spans": ["Vigilância Epidemiológica", "funções", "prevenção e controle"], "ambiguities": [] },
+      "difficulty": "M",
+      "cognitive_level": "Lembrar",
+      "stem": "Sobre as funções da Vigilância Epidemiológica, assinale a alternativa INCORRETA:",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "Coleta, processamento, análise e interpretação de dados."},
+        {"label": "B", "text": "Recomendação de medidas de prevenção e controle de doenças e agravos."},
+        {"label": "C", "text": "Assistência por intermédio de ações de recuperação da saúde."},
+        {"label": "D", "text": "Avaliação da eficácia e efetividade das medidas prevenção e controle adotados."},
+        {"label": "E", "text": "Divulgação de informações pertinentes ao comportamento de doenças e agravos."}
+      ],
+      "answer_type": "single",
+      "answer_key": "C",
+      "rationales": {
+        "A": "Correta. É o ciclo básico da vigilância epidemiológica: coletar e analisar dados.",
+        "B": "Correta. A análise dos dados serve para subsidiar a recomendação de ações.",
+        "C": "Incorreta. A assistência direta ao paciente (tratamento, recuperação) é uma função da Rede de Atenção à Saúde (hospitais, UBS), não da Vigilância Epidemiológica. A vigilância informa e orienta a rede, mas não executa a assistência.",
+        "D": "Correta. É crucial avaliar se as medidas recomendadas estão funcionando.",
+        "E": "Correta. A comunicação do risco e a divulgação de informações são funções essenciais."
+      },
+      "review": {
+        "etiologia": "A Vigilância Epidemiológica (VE) é uma das quatro vigilâncias em saúde previstas na Lei 8.080/90, focada no monitoramento de doenças e agravos para subsidiar ações de prevenção e controle. É um sistema de informação para ação.",
+        "epidemiologia": "A VE é fundamental para o conhecimento da situação de saúde da população, permitindo a detecção precoce de problemas e a avaliação da efetividade das intervenções. É responsável por monitorar mais de 100 doenças e agravos no Brasil.",
+        "fisiologia": "A Vigilância Epidemiológica (VE) é um conjunto de ações que proporciona o conhecimento, a detecção ou prevenção de qualquer mudança nos fatores determinantes e condicionantes de saúde individual ou coletiva. Seu foco é a informação para a ação. Ela monitora doenças, recomenda controle, avalia intervenções e divulga informações, mas a prestação de serviços de saúde (assistência) é de responsabilidade de outra esfera do SUS. O ciclo da VE inclui coleta, processamento, análise, recomendação, promoção, avaliação e divulgação.",
+        "high_yield": [
+          "O papel da VE é 'informação para ação'",
+          "VE não faz assistência médica direta",
+          "O ciclo da VE: Coleta -> Processamento -> Análise -> Recomendação -> Promoção -> Avaliação -> Divulgação",
+          "VE monitora doenças, rede de atenção trata pacientes"
+        ],
+        "pegadinhas": [
+          "Atribuir à vigilância a função de tratar pacientes",
+          "Confundir VE com assistência à saúde",
+          "Esquecer que VE é informação, não ação direta"
+        ],
+        "referencias": [
+          {"obra": "Lei 8.080/90", "cap": "Art. 6º, § 2º", "pg": "Definição de Vigilância Epidemiológica"},
+          {"obra": "Manual de Vigilância Epidemiológica", "cap": "Conceitos Básicos", "pg": "Ciclo da Vigilância"}
+        ]
+      },
+      "provenance": {"extracted_at": "2024-05-24T10:00:00Z", "checksum": "sha256:g7h8i9j0k1l2"},
+      "status": "approved",
+      "version": 1,
+      "issues": []
+    },
+    {
+      "id": "UFV-2024-SP-0008",
+      "year": 2024,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2024.docx",
+      "source_pages": {"start": null, "end": null},
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["VIGILÂNCIA EM SAÚDE", "VIGILÂNCIA SANITÁRIA"],
+      "classification_meta": { "area_confidence": {"SAÚDE PÚBLICA": 0.99}, "topic_confidence": {"VIGILÂNCIA SANITÁRIA": 0.95}, "evidence_spans": ["Vigilância Sanitária", "riscos à saúde", "produção e circulação de bens"], "ambiguities": [] },
+      "difficulty": "F",
+      "cognitive_level": "Lembrar",
+      "stem": "Assinale a alternativa que descreve as ações da Vigilância Sanitária:",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "Conjunto de ações capazes de eliminar, diminuir ou prevenir riscos à saúde e de intervir nos problemas sanitários decorrentes do meio ambiente, da produção e da circulação de bens e da prestação de serviços de interesse da saúde."},
+        {"label": "B", "text": "Conjunto de ações que proporciona o conhecimento, a detecção ou prevenção de qualquer mudança nos fatores determinantes e condicionantes de saúde individual e coletiva, com finalidade de recomendar e adotar as medidas de prevenção e controle das doenças ou agravos."},
+        {"label": "C", "text": "Conjunto de ações que proporcionam o conhecimento e a detecção de mudança nos fatores determinantes e condicionantes do meio ambiente que interferem na saúde humana, com a finalidade de identificar as medidas de prevenção e controle dos fatores de risco ambientais relacionados às doenças ou a outros agravos à saúde."},
+        {"label": "D", "text": "Conjunto de atividades que se destina à promoção e proteção da saúde dos trabalhadores, assim como visa à recuperação e reabilitação da saúde dos trabalhadores submetidos aos riscos e agravos advindos das condições de trabalho."},
+        {"label": "E", "text": "Conjunto de atividades que tem como finalidade definir os princípios, as diretrizes e as estratégias a serem observados para o desenvolvimento da promoção e a proteção da saúde e a prevenção de doenças e agravos."}
+      ],
+      "answer_type": "single",
+      "answer_key": "A",
+      "rationales": {
+        "A": "Correta. Esta é a definição clássica de Vigilância Sanitária, conforme a Lei 8.080/90. Ela foca no controle de riscos associados a produtos (bens), serviços e ambientes.",
+        "B": "Incorreta. Esta é a definição de Vigilância Epidemiológica.",
+        "C": "Incorreta. Esta é a definição de Vigilância em Saúde Ambiental.",
+        "D": "Incorreta. Esta é a definição de Vigilância em Saúde do Trabalhador.",
+        "E": "Incorreta. Esta é uma descrição mais geral da Política Nacional de Promoção da Saúde."
+      },
+      "review": {
+        "fisiologia": "A Vigilância em Saúde é composta por quatro componentes principais: Epidemiológica (doenças e agravos), Sanitária (produtos, serviços e ambientes), Ambiental (fatores de risco no meio ambiente) e Saúde do Trabalhador (riscos ocupacionais). É essencial conhecer a definição de cada uma.",
+        "high_yield": ["Vigilância Sanitária = controle sobre produtos, serviços e ambientes.", "Vigilância Epidemiológica = controle sobre doenças e agravos.", "Vigilância Ambiental = controle sobre fatores de risco do meio ambiente (água, ar, solo, vetores).", "Vigilância em Saúde do Trabalhador = controle sobre riscos no ambiente de trabalho."],
+        "pegadinhas": ["Trocar as definições entre os diferentes tipos de vigilância."]
+      },
+      "provenance": {"extracted_at": "2024-05-24T10:00:00Z", "checksum": "sha256:h8i9j0k1l2m3"},
+      "status": "approved",
+      "version": 1,
+      "issues": []
+    },
+    {
+      "id": "UFV-2024-SP-0009",
+      "year": 2024,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2024.docx",
+      "source_pages": {"start": null, "end": null},
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["VIGILÂNCIA EM SAÚDE AMBIENTAL", "QUALIDADE DA ÁGUA", "VIGIAGUA"],
+      "classification_meta": { "area_confidence": {"SAÚDE PÚBLICA": 0.99}, "topic_confidence": {"VIGIAGUA": 0.95}, "evidence_spans": ["Vigilância em Saúde Ambiental", "Vigiagua", "qualidade da água"], "ambiguities": [] },
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Dentre os componentes básicos da Vigilância em Saúde Ambiental, o de maior destaque é o Programa Nacional de Vigilância da Qualidade da Água para Consumo Humano (Vigiagua). Sobre as ações do Vigiagua, assinale a alternativa INCORRETA:",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "Identificar e cadastrar, as formas de abastecimento de água existentes no município."},
+        {"label": "B", "text": "Analisar as informações acerca das características das formas de abastecimento de água e da qualidade da água do abastecimento."},
+        {"label": "C", "text": "Analisar o plano de amostragem para monitoramento da qualidade da água, elaborado pelos responsáveis pelo abastecimento de água"},
+        {"label": "D", "text": "Disponibilizar publicamente as informações sobre a qualidade da água em linguagem compreensível."},
+        {"label": "E", "text": "Realizar coleta e análises de amostras para o controle da qualidade da água nos sistemas de abastecimento."}
+      ],
+      "answer_type": "single",
+      "answer_key": "E",
+      "rationales": {
+        "A": "Correta. O cadastramento é uma ação fundamental da vigilância.",
+        "B": "Correta. A análise de informações é central para a vigilância.",
+        "C": "Correta. O Vigiagua fiscaliza e avalia o plano de monitoramento dos prestadores de serviço.",
+        "D": "Correta. A comunicação e transparência são essenciais.",
+        "E": "Incorreta. A coleta e análise de amostras para o CONTROLE da qualidade da água é uma responsabilidade do prestador de serviço (a companhia de saneamento). O Vigiagua (a vigilância) realiza coletas para a VIGILÂNCIA, que são amostras em menor número para verificar se o controle está sendo feito adequadamente. A afirmação generaliza que o Vigiagua realiza a coleta para o 'controle', o que é primariamente uma atribuição do fornecedor."
+      },
+      "review": {
+        "fisiologia": "É crucial diferenciar as responsabilidades de 'Controle' e 'Vigilância' da qualidade da água. O Controle é de responsabilidade de quem fornece a água (ex: empresa de saneamento), que deve realizar análises frequentes e em grande volume. A Vigilância é de responsabilidade do setor saúde (Vigiagua), que fiscaliza o controle, realiza análises complementares (em menor número) para verificar a qualidade e toma medidas de saúde pública quando necessário.",
+        "high_yield": ["Controle da qualidade da água = Responsabilidade do FORNECEDOR.", "Vigilância da qualidade da água = Responsabilidade do SETOR SAÚDE (Vigiagua).", "Vigiagua não executa o controle, ele fiscaliza o controle."],
+        "pegadinhas": ["Confundir as atribuições de controle e vigilância."]
+      },
+      "provenance": {"extracted_at": "2024-05-24T10:00:00Z", "checksum": "sha256:i9j0k1l2m3n4"},
+      "status": "approved",
+      "version": 1,
+      "issues": []
+    },
+    {
+      "id": "UFV-2024-SP-0010",
+      "year": 2024,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2024.docx",
+      "source_pages": {"start": null, "end": null},
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["ESPOROTRICOSE", "SAÚDE ÚNICA", "ZOONOSES"],
+      "classification_meta": { "area_confidence": {"SAÚDE PÚBLICA": 0.95}, "topic_confidence": {"ESPOROTRICOSE": 0.95, "SAÚDE ÚNICA": 0.9}, "evidence_spans": ["esporotricose", "Sporothrix", "Saúde Única", "One Health"], "ambiguities": [] },
+      "difficulty": "M",
+      "cognitive_level": "Aplicação",
+      "stem": "A esporotricose é a micose de implantação mais prevalente e globalmente distribuída, causada por fungos do gênero Sporothrix. A infecção ocorre, principalmente, pelo contato do fungo com a pele ou mucosa (...). A ocorrência de casos de esporotricose decorre da interconexão complexa de sistemas sociais e biológicos entre a saúde humana, animal e ambiental, o que requer abordagens multi e interdisciplinares. Dessa forma, o Guia de Vigilância em Saúde (2021) reforça que as estratégias de prevenção e controle devem ser adotadas no contexto de Saúde Única (One Health) (...). Considerando a abordagem da Saúde Única na prevenção e controle da esporotricose, identifique com (SM) as medidas de Saúde Ambiental, (SA) as medidas de Saúde Animal e (SH) as medidas de Saúde Humana nas seguintes afirmações:\n( ) Uso de hipoclorito de sódio na limpeza de superfícies onde o animal doente foi manipulado.\n( ) Tratamento correto e isolamento em local apropriado dos animais doentes.\n( ) Atenção à exposição ocupacional.\n( ) Uso de equipamentos de proteção individual (EPIs).\n( ) Destinação correta das carcaças de animais infectados.\nAssinale a alternativa que apresenta a sequência correta:",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "SM – SA – SH – SA – SM"},
+        {"label": "B", "text": "SM – SA – SH – SH – SM"},
+        {"label": "C", "text": "SA – SA – SH – SH – SM"},
+        {"label": "D", "text": "SA – SM – SA – SA – SA"},
+        {"label": "E", "text": "SH – SM – SA – SM – AS"}
+      ],
+      "answer_type": "single",
+      "answer_key": "B",
+      "rationales": {
+        "A": "Incorreta. O uso de EPIs é uma medida de Saúde Humana, para proteção do indivíduo.",
+        "B": "Correta. (SM) Limpeza de superfícies é ambiental. (SA) Tratamento e isolamento do animal é saúde animal. (SH) Atenção à exposição ocupacional é saúde humana (do trabalhador). (SH) Uso de EPIs é proteção individual, logo, saúde humana. (SM) Destinação correta de carcaças é uma medida para evitar contaminação ambiental.",
+        "C": "Incorreta. A limpeza de superfícies com hipoclorito é uma medida ambiental (SM), não de saúde animal (SA).",
+        "D": "Incorreta. A sequência está errada em várias classificações.",
+        "E": "Incorreta. Sequência incorreta e a última sigla 'AS' não existe no contexto da questão."
+      },
+      "review": {
+        "fisiologia": "O conceito de Saúde Única (One Health) preconiza que a saúde humana, a saúde animal e a saúde do ambiente estão interligadas. As medidas de controle de zoonoses como a esporotricose devem abranger os três pilares: tratar os animais (SA), proteger os humanos (SH) e descontaminar e manejar o ambiente (SM) para quebrar o ciclo de transmissão.",
+        "high_yield": ["Saúde Ambiental (SM): Foco no ambiente (descontaminação, destino de carcaças, controle de vetores).", "Saúde Animal (SA): Foco no animal (tratamento, vacinação, diagnóstico, bem-estar).", "Saúde Humana (SH): Foco no humano (EPI, educação, tratamento, diagnóstico)."],
+        "pegadinhas": ["Confundir uma medida de proteção individual (EPI - SH) com uma medida de saúde animal (SA)."]
+      },
+      "provenance": {"extracted_at": "2024-05-24T10:00:00Z", "checksum": "sha256:j0k1l2m3n4o5"},
+      "status": "approved",
+      "version": 1,
+      "issues": []
+    },
+    {
+      "id": "UFV-2024-CM-0011",
+      "year": 2024,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2024 - Clínica Médica.pdf",
+      "source_pages": {"start": null, "end": null},
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["FARMACODINÂMICA", "RECEPTORES FARMACOLÓGICOS"],
+      "classification_meta": { "area_confidence": {"FARMACOLOGIA": 0.98}, "topic_confidence": {"FARMACODINÂMICA": 0.95}, "evidence_spans": ["farmacodinâmica", "receptores", "proteínas G", "AMPc", "hiperpolarização"], "ambiguities": [] },
+      "difficulty": "M",
+      "cognitive_level": "Entender",
+      "stem": "A farmacodinâmica é a ciência que estuda os mecanismos pelos quais moléculas atuam nas funções fisiológicas de um organismo vivo e têm máxima importância para o entendimento dos efeitos farmacológicos dos medicamentos. O alvo de ligação de um fármaco no organismo animal são macromoléculas proteicas com diversos tipos de funções. Acerca dos tipos de interações químicas que envolvem a ligação dos medicamentos a receptores, assinale a alternativa CORRETA.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "As proteínas G são os mensageiros entre os receptores e as enzimas responsáveis pelas mudanças no interior das células. São constituídas de 3 subunidades que estão ligadas ao núcleo celular."},
+        {"label": "B", "text": "Receptores metabotrópicos se caracterizam por alta velocidade de efeito, pois estão acoplados diretamente à canais iônicos que se alteram diante da ligação deste com neurotransmissores específicos."},
+        {"label": "C", "text": "Os receptores ionotrópicos captam sinais extracelulares que são transmitidos intracelularmente através de segundos mensageiros ou moléculas de informação e daí desencadeiam respostas celulares."},
+        {"label": "D", "text": "Cada receptor apresenta afinidade por apenas uma molécula específica, sendo este modelo denominado chave-cadeado."},
+        {"label": "E", "text": "A ativação de receptores ligados à proteínas G inibitórias leva a uma cascata de eventos envolvendo redução na concentração de AMPc e hiperpolarização celular."}
+      ],
+      "answer_type": "single",
+      "answer_key": "E",
+      "rationales": {
+        "A": "Incorreta. As proteínas G estão ligadas à face interna da membrana plasmática, não ao núcleo celular.",
+        "B": "Incorreta. Receptores metabotrópicos (acoplados à proteína G) têm uma velocidade de efeito mais LENTA que os ionotrópicos, pois dependem de uma cascata de sinalização com segundos mensageiros.",
+        "C": "Incorreta. Receptores ionotrópicos são canais iônicos que se abrem ou fecham com a ligação do ligante, permitindo o fluxo de íons. Eles não dependem de segundos mensageiros; a resposta é o fluxo iônico direto. Os metabotrópicos usam segundos mensageiros.",
+        "D": "Incorreta. A especificidade não é absoluta. Um mesmo receptor pode ser ativado por diferentes moléculas (agonistas), e uma mesma molécula pode se ligar a diferentes tipos de receptores (ex: acetilcolina em receptores muscarínicos e nicotínicos). O modelo chave-fechadura é uma simplificação.",
+        "E": "Correta. Receptores acoplados à proteína Gi (inibitória) causam a inibição da enzima adenilil ciclase, o que reduz a conversão de ATP em AMPc (segundo mensageiro). A subunidade βγ da proteína Gi pode também abrir canais de potássio, levando à sua saída da célula, o que causa hiperpolarização e diminui a excitabilidade celular."
+      },
+      "review": {
+        "etiologia": "A farmacodinâmica estuda como os fármacos interagem com seus alvos moleculares (receptores, enzimas, canais iônicos) para produzir efeitos farmacológicos. Os receptores são proteínas que medeiam a comunicação celular e são os principais alvos dos fármacos.",
+        "epidemiologia": "O entendimento da farmacodinâmica é fundamental para o uso racional de medicamentos em medicina veterinária, permitindo prever efeitos terapêuticos e adversos, bem como interações medicamentosas.",
+        "fisiologia": "Existem 4 superfamílias de receptores: 1) Ionotrópicos (rápidos, canais iônicos que se abrem/fecham diretamente), 2) Metabotrópicos (acoplados à proteína G, lentos, usam 2º mensageiro como AMPc/IP3), 3) Ligados a quinases (ex: insulina, fatores de crescimento) e 4) Nucleares (intracelulares, regulam transcrição gênica, muito lentos). A proteína Gs estimula a adenilil ciclase (aumenta AMPc), enquanto a Gi inibe. A Gq ativa a fosfolipase C (aumenta IP3 e DAG). A ativação de receptores acoplados à proteína Gi inibe a adenilil ciclase, reduzindo AMPc e causando hiperpolarização celular.",
+        "high_yield": [
+          "Diferenciar receptores ionotrópicos (rápidos, íons) de metabotrópicos (lentos, proteína G, AMPc/IP3)",
+          "Proteína Gi: inibe adenilil ciclase -> diminui AMPc -> abre canais de K+ -> hiperpolarização",
+          "Receptores ionotrópicos = resposta rápida, metabotrópicos = resposta lenta",
+          "Proteína Gs = estimula adenilil ciclase, Gi = inibe adenilil ciclase"
+        ],
+        "pegadinhas": [
+          "Trocar as características de velocidade e mecanismo entre receptores ionotrópicos e metabotrópicos",
+          "Confundir proteína Gs (estimuladora) com Gi (inibitória)",
+          "Esquecer que receptores ionotrópicos não usam segundos mensageiros"
+        ],
+        "referencias": [
+          {"obra": "Rang & Dale's Pharmacology", "cap": "Receptores e Sinalização", "pg": "Proteínas G e segundos mensageiros"},
+          {"obra": "Cunningham", "cap": "Farmacologia", "pg": "Mecanismos de ação dos fármacos"}
+        ]
+      },
+      "provenance": {"extracted_at": "2024-05-24T10:00:00Z", "checksum": "sha256:k1l2m3n4o5p6"},
+      "status": "approved",
+      "version": 1,
+      "issues": []
+    },
+    {
+      "id": "UFV-2024-CM-0012",
+      "year": 2024,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2024 - Clínica Médica.pdf",
+      "source_pages": {"start": null, "end": null},
+      "area_tags": ["ANESTESIOLOGIA"],
+      "topic_tags": ["AGONISTAS ALFA-2", "DEXMEDETOMIDINA", "XILAZINA", "FARMACOLOGIA ADRENÉRGICA"],
+      "classification_meta": { "area_confidence": {"ANESTESIOLOGIA": 0.9, "FARMACOLOGIA": 0.95}, "topic_confidence": {"AGONISTAS ALFA-2": 0.98}, "evidence_spans": ["agonistas dos receptores α2-adrenérgicos", "xilazina", "dexmedetomidina", "sedação", "analgesia"], "ambiguities": [] },
+      "difficulty": "M",
+      "cognitive_level": "Entender",
+      "stem": "Sobre os fármacos agonistas dos receptores α2-adrenérgicos, é INCORRETO afirmar que:",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "Quanto mais seletivo para os receptores α2-adrenérgicos for um fármaco, maior a probabilidade de observação de rigidez e/ou excitação paradoxal."},
+        {"label": "B", "text": "No SNC, a ligação dos agonistas aos receptores α2-adrenérgicos leva à sedação, analgesia e efeitos centralmente mediados sobre a frequência cardíaca e a pós-carga."},
+        {"label": "C", "text": "A bradicardia sinusal e o bloqueio atrioventricular constituem as arritmias mais comumente observadas com a administração de xilazina."},
+        {"label": "D", "text": "A dexmedetomidina é o isômero dextrorrotatório da medetomidina, e apresenta seletividade α2:α1 igual a 1620:1."},
+        {"label": "E", "text": "A dexmedetomidina promove aumento da pressão arterial sistólica, da resistência vascular sistêmica e da concentração plasmática de glicose."}
+      ],
+      "answer_type": "single",
+      "answer_key": "A",
+      "rationales": {
+        "A": "Incorreta. A afirmação é o oposto do que ocorre. A rigidez e excitação paradoxal são mais associadas a fármacos MENOS seletivos, que possuem maior atividade em receptores α1. Fármacos mais seletivos para α2, como a dexmedetomidina, produzem uma sedação mais confiável e de melhor qualidade.",
+        "B": "Correta. A ativação de receptores α2 pré-sinápticos no SNC (especialmente no Locus Coeruleus) inibe a liberação de noradrenalina, resultando em sedação e analgesia. Também reduz o tônus simpático central, contribuindo para a bradicardia.",
+        "C": "Correta. A bradicardia sinusal é o efeito cardiovascular mais comum e esperado dos agonistas α2. Bloqueios AV de primeiro e segundo grau também são frequentes devido ao aumento do tônus vagal e à redução do tônus simpático.",
+        "D": "Correta. A medetomidina é uma mistura racêmica dos isômeros dextrorrotatório (dexmedetomidina) e levorrotatório (levomedetomidina). A dexmedetomidina é o isômero ativo, com alta seletividade α2:α1.",
+        "E": "Correta. O agonismo α2 periférico (em vasos sanguíneos) causa vasoconstrição inicial, levando a um aumento da pressão arterial (pós-carga). O agonismo α2 no pâncreas inibe a liberação de insulina, resultando em hiperglicemia."
+      },
+      "review": {
+        "etiologia": "Os agonistas alfa-2 adrenérgicos são fármacos que atuam estimulando os receptores α2-adrenérgicos, resultando em sedação, analgesia e miorrelaxamento. A dexmedetomidina é o isômero ativo da medetomidina, com alta seletividade para receptores α2.",
+        "epidemiologia": "A dexmedetomidina é amplamente utilizada em medicina veterinária para sedação e analgesia, especialmente em procedimentos diagnósticos e cirúrgicos menores. É particularmente útil em pacientes que não toleram outros sedativos ou quando se deseja sedação reversível.",
+        "fisiologia": "Agonistas α2 (xilazina, detomidina, medetomidina, dexmedetomidina) atuam centralmente para causar sedação, miorrelaxamento e analgesia. Seus principais efeitos colaterais são cardiovasculares (bradicardia, BAV, vasoconstrição periférica inicial seguida de hipotensão) e hiperglicemia. A dexmedetomidina é a mais seletiva para o receptor α2, proporcionando melhor qualidade de sedação e menos efeitos indesejados relacionados ao α1. A ativação de receptores α2 pré-sinápticos inibe a liberação de noradrenalina, resultando em redução do tônus simpático central.",
+        "high_yield": [
+          "Efeitos dos α2-agonistas: sedação, analgesia, miorrelaxamento",
+          "Efeitos colaterais: bradicardia, BAV, hipertensão inicial, hiperglicemia, vômito (em cães e gatos)",
+          "Dexmedetomidina é mais seletiva que xilazina (seletividade α2:α1 = 1620:1)",
+          "Fármacos menos seletivos podem causar rigidez e excitação paradoxal"
+        ],
+        "pegadinhas": [
+          "Assumir que a vasoconstrição é o único efeito na pressão arterial; após a fase inicial de hipertensão, o efeito central prevalece, podendo levar à hipotensão",
+          "Confundir seletividade: fármacos MENOS seletivos causam mais efeitos α1 (rigidez, excitação)",
+          "Esquecer que a hiperglicemia é um efeito esperado dos agonistas α2"
+        ],
+        "referencias": [
+          {"obra": "Plumb's Veterinary Drug Handbook", "cap": "Dexmedetomidina", "pg": "Farmacologia dos agonistas α2"},
+          {"obra": "Cunningham", "cap": "Farmacologia", "pg": "Receptores adrenérgicos"}
+        ]
+      },
+      "provenance": {"extracted_at": "2024-05-24T10:00:00Z", "checksum": "sha256:l2m3n4o5p6q7"},
+      "status": "approved",
+      "version": 1,
+      "issues": []
+    },
+    {
+      "id": "UFV-2024-CM-0013",
+      "year": 2024,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2024 - Clínica Médica.pdf",
+      "source_pages": {"start": null, "end": null},
+      "area_tags": ["LABORATÓRIO CLÍNICO"],
+      "topic_tags": ["ANÁLISE DE EFUSÕES", "LÍQUIDOS CAVITÁRIOS", "CITOLOGIA"],
+      "classification_meta": { "area_confidence": {"LABORATÓRIO CLÍNICO": 0.98}, "topic_confidence": {"ANÁLISE DE EFUSÕES": 0.95}, "evidence_spans": ["líquidos cavitários", "efusões", "exsudatos", "células nucleadas", "proteína"], "ambiguities": [] },
+      "difficulty": "M",
+      "cognitive_level": "Lembrar",
+      "stem": "Líquidos cavitários: na classificação das efusões abdominais, torácicas e pericárdicas, são características dos exsudatos, EXCETO.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "Altas concentrações de proteína (> 3,0 g/dL)"},
+        {"label": "B", "text": "Celularidade alta com contagem global de células nucleadas acima de 7000/μL"},
+        {"label": "C", "text": "Os fluidos apresentam-se de turvos a opacos"},
+        {"label": "D", "text": "As colorações, mais comuns, incluem o âmbar, branco e tons avermelhados."},
+        {"label": "E", "text": "Os linfócitos são as células predominantes na maioria dos exsudatos inflamatórios"}
+      ],
+      "answer_type": "single",
+      "answer_key": "E",
+      "rationales": {
+        "A": "Correta. Exsudatos são ricos em proteínas devido ao aumento da permeabilidade vascular causada pela inflamação.",
+        "B": "Correta. Exsudatos têm alta celularidade devido à quimiotaxia de células inflamatórias para o local.",
+        "C": "Correta. A alta concentração de células e proteínas torna o líquido turvo a opaco.",
+        "D": "Correta. A cor pode variar dependendo do tipo de célula e da presença de sangue ou lipídios.",
+        "E": "Incorreta. Os NEUTRÓFILOS (geralmente degenerados) são as células predominantes na maioria dos exsudatos inflamatórios, especialmente os sépticos. Linfócitos predominam em efusões quilosas ou em algumas inflamações crônicas ou neoplásicas (linfoma), mas não na maioria dos exsudatos inflamatórios agudos."
+      },
+      "review": {
+        "etiologia": "Os exsudatos são efusões que resultam de processos inflamatórios que aumentam a permeabilidade vascular e atraem células inflamatórias para a cavidade. As principais causas incluem infecções bacterianas, virais (como PIF), neoplasias e processos inflamatórios não infecciosos.",
+        "epidemiologia": "A Peritonite Infecciosa Felina (PIF) é uma das causas mais comuns de exsudato abdominal em gatos jovens, especialmente em ambientes com múltiplos gatos. Em cães, peritonites sépticas secundárias a perfuração intestinal ou ruptura de abscessos são frequentes.",
+        "fisiologia": "As efusões são classificadas em transudatos, transudatos modificados e exsudatos com base na concentração de proteínas e na contagem de células nucleadas. Transudato: baixa proteína (< 2.5 g/dL), baixa celularidade (< 1500/μL) - ex: hipoalbuminemia. Transudato Modificado: proteína e/ou celularidade intermediárias - ex: insuficiência cardíaca congestiva. Exsudato: alta proteína (> 3.0 g/dL), alta celularidade (> 7000/μL) - ex: inflamação, sepse, neoplasia. A inflamação aumenta a permeabilidade vascular, permitindo extravasamento de proteínas e migração de células inflamatórias.",
+        "high_yield": [
+          "Exsudato = Inflamação (proteína > 3.0 g/dL, celularidade > 7000/μL)",
+          "Predomínio de neutrófilos na maioria dos exsudatos inflamatórios agudos",
+          "Causas principais: PIF (gatos), peritonite/pleurite séptica, neoplasias",
+          "Transudato: proteína < 2.5 g/dL, celularidade < 1500/μL"
+        ],
+        "pegadinhas": [
+          "Assumir que toda inflamação é neutrofílica. Embora a maioria seja, inflamações crônicas podem ter macrófagos e linfócitos",
+          "PIF classicamente tem neutrófilos não-degenerados e macrófagos, não apenas neutrófilos degenerados",
+          "Confundir exsudato com transudato modificado"
+        ],
+        "referencias": [
+          {"obra": "Nelson & Couto", "cap": "Análise de Líquidos Cavitários", "pg": "Classificação das efusões"},
+          {"obra": "Cunningham", "cap": "Citologia", "pg": "Análise de efusões"}
+        ]
+      },
+      "provenance": {"extracted_at": "2024-05-24T10:00:00Z", "checksum": "sha256:m3n4o5p6q7r8"},
+      "status": "approved",
+      "version": 1,
+      "issues": []
+    },
+    {
+      "id": "UFV-2024-CM-0014",
+      "year": 2024,
+      "exam": "UFV",
+      "source_file": "Prova UFV 2024 - Clínica Médica.pdf",
+      "source_pages": {"start": null, "end": null},
+      "area_tags": ["LABORATÓRIO CLÍNICO"],
+      "topic_tags": ["HEMATOLOGIA", "ERITROGRAMA", "ANEMIA"],
+      "classification_meta": { "area_confidence": {"LABORATÓRIO CLÍNICO": 0.98}, "topic_confidence": {"HEMATOLOGIA": 0.95, "ANEMIA": 0.9}, "evidence_spans": ["hematologia", "eritrograma", "hematócrito", "VCM", "CHCM", "anemia"], "ambiguities": [] },
+      "difficulty": "F",
+      "cognitive_level": "Aplicação",
+      "stem": "Hematologia, eritrograma de cão: hematócrito – 18,0 %; hemácias – 3,4 milhões/μL; hemoglobina – 4,8 g/dL; VCM – 53,0 fL; CHCM – 26,67 g/dL. Analisando os dados fornecidos, assinale a alternativa CORRETA.",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "O paciente apresenta uma anemia normocítica e normocrômica"},
+        {"label": "B", "text": "O paciente, em questão, não se apresenta anêmico"},
+        {"label": "C", "text": "Os dados apresentados indicam uma anemia microcítica e hipocrômica"},
+        {"label": "D", "text": "Os dados apresentados indicam uma anemia macrocítica e normocrômica"},
+        {"label": "E", "text": "Os dados apresentados indicam uma anemia microcítica e normocrômica"}
+      ],
+      "answer_type": "single",
+      "answer_key": "C",
+      "rationales": {
+        "A": "Incorreta. O VCM e o CHCM estão abaixo dos valores de referência para cães.",
+        "B": "Incorreta. O hematócrito de 18% é muito baixo (valor de referência normal para cães ~37-55%), indicando uma anemia severa.",
+        "C": "Correta. O VCM (Volume Corpuscular Médio) de 53,0 fL está abaixo do valor de referência (normal ~60-77 fL), indicando microcitose. O CHCM (Concentração de Hemoglobina Corpuscular Média) de 26,67 g/dL está abaixo do valor de referência (normal ~32-36 g/dL), indicando hipocromia. Portanto, trata-se de uma anemia microcítica e hipocrômica.",
+        "D": "Incorreta. O VCM está baixo (microcítica), não alto (macrocítica).",
+        "E": "Incorreta. O CHCM está baixo (hipocrômica), não normal (normocrômica)."
+      },
+      "review": {
+        "etiologia": "A anemia microcítica e hipocrômica é caracterizada por hemácias menores que o normal (microcitose) e com menor concentração de hemoglobina (hipocromia). Esta é a apresentação clássica da deficiência de ferro, que pode ocorrer por perda crônica de sangue, má absorção ou deficiência nutricional.",
+        "epidemiologia": "A deficiência de ferro é uma das causas mais comuns de anemia em medicina veterinária, especialmente em cães com sangramento crônico (parasitas intestinais, neoplasias, úlceras) ou em filhotes com dieta inadequada.",
+        "fisiologia": "A classificação morfológica da anemia é feita pelos índices hematimétricos: VCM e CHCM. VCM avalia o tamanho da hemácia (microcítica, normocítica, macrocítica). CHCM avalia a 'cor' (concentração de hemoglobina) da hemácia (hipocrômica, normocrômica). Anemias microcíticas e hipocrômicas são o padrão clássico da deficiência de ferro crônica. O ferro é essencial para a síntese de hemoglobina, e sua deficiência resulta em hemácias menores e menos pigmentadas.",
+        "high_yield": [
+          "VCM < normal = Microcítica (VCM cão normal: 60-77 fL)",
+          "VCM > normal = Macrocítica (VCM cão normal: 60-77 fL)", 
+          "CHCM < normal = Hipocrômica (CHCM cão normal: 32-36 g/dL)",
+          "Anemia microcítica e hipocrômica = pensar em deficiência de ferro (ex: sangramento crônico) ou shunt portossistêmico",
+          "Hematócrito cão normal: 37-55%"
+        ],
+        "pegadinhas": [
+          "Não conhecer os valores de referência. Para provas, é bom ter uma noção geral (VCM cão ~65, CHCM cão ~34)",
+          "Confundir microcitose com macrocitose",
+          "Esquecer que shunt portossistêmico também pode causar anemia microcítica e hipocrômica"
+        ],
+        "referencias": [
+          {"obra": "Nelson & Couto", "cap": "Hematologia", "pg": "Classificação das anemias"},
+          {"obra": "Cunningham", "cap": "Eritrograma", "pg": "Índices hematimétricos"}
+        ]
+      },
+      "provenance": {"extracted_at": "2024-05-24T10:00:00Z", "checksum": "sha256:n4o5p6q7r8s9"},
+      "status": "approved",
+      "version": 1,
+      "issues": []
+    }
+  ]
+}

@@ -1,0 +1,408 @@
+{
+  "meta": {
+    "batch": 4,
+    "total_batches": 4,
+    "taxonomy_version": "v1.0",
+    "generator": "manual-entry",
+    "notes": ["UFV 2022 – Primeiras 20 questões (SP 01–10; Multidisciplinares/Clínica 11–20)"],
+    "persistence": { "strategy": ["json_canonical"], "conflicts": "upsert_on_checksum", "defaults": { "namespace": "vet-residencia", "schema_version": 1 } }
+  },
+  "items": [
+    {
+      "id": "UFV-2022-SP4-0001",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["SUS", "LEI 8.080", "VIGILÂNCIA EM SAÚDE"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "De acordo com a Lei 8.080 de 1990, no que se refere a execução das ações de Vigilância em Saúde é CORRETO afirmar:\n(A) Vigilância sanitária: conjunto de ações que proporcionam o conhecimento e a detecção de mudança nos fatores determinantes e condicionantes do meio ambiente que interferem na saúde humana, com a finalidade de identificar as medidas de prevenção e controle dos fatores de risco ambientais relacionados às doenças ou a outros agravos à saúde.\n(B) Vigilância epidemiológica: conjunto de ações capaz de eliminar, diminuir ou prevenir riscos à saúde e de intervir nos problemas sanitários decorrentes do meio ambiente, da produção e circulação de bens e da prestação de serviços de interesse da saúde.\n(C) Saúde do trabalhador: conjunto de atividades que se destina à promoção e proteção da saúde dos trabalhadores, assim como visa à recuperação e reabilitação da saúde dos trabalhadores submetidos aos riscos e agravos advindos das condições de trabalho.\n(D) Vigilância ambiental: conjunto de ações que proporcionam o conhecimento, a detecção ou prevenção de qualquer mudança nos fatores determinantes e condicionantes de saúde individual ou coletiva, com a finalidade de recomendar e adotar as medidas de prevenção e controle das doenças ou agravos.\n(E) Todas as afirmações estão corretas",
+      "media": [],
+      "options": [
+        {"label": "A", "text": "Vigilância sanitária..."},
+        {"label": "B", "text": "Vigilância epidemiológica..."},
+        {"label": "C", "text": "Saúde do trabalhador..."},
+        {"label": "D", "text": "Vigilância ambiental..."},
+        {"label": "E", "text": "Todas as afirmações estão corretas"}
+      ],
+      "answer_type": "single",
+      "answer_key": "C",
+      "rationales": {
+        "C": "Correta. Define saúde do trabalhador conforme Lei 8.080/90 (promoção, proteção, recuperação e reabilitação).",
+        "A": "Incorreta. Descrição é de vigilância ambiental, não sanitária.",
+        "B": "Incorreta. Descrição é de vigilância sanitária, não epidemiológica.",
+        "D": "Incorreta. Descrição é de vigilância epidemiológica, não ambiental.",
+        "E": "Incorreta. Há classificações trocadas nas alternativas A, B e D."
+      }
+    },
+    {
+      "id": "UFV-2022-SP4-0002",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["VIGILÂNCIA EPIDEMIOLÓGICA", "NOTIFICAÇÃO"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Historicamente, a notificação compulsória... Os parâmetros para inclusão... Assinale a alternativa que apresente associação INCORRETA entre o parâmetro e sua definição: (A) Magnitude ... apenas em doenças de elevada letalidade... (B) Potencial de disseminação... (C) Transcendência... (D) Vulnerabilidade... (E) Compromissos internacionais...",
+      "options": [
+        {"label": "A", "text": "Magnitude... apenas em doenças de elevada letalidade..."},
+        {"label": "B", "text": "Potencial de disseminação..."},
+        {"label": "C", "text": "Transcendência..."},
+        {"label": "D", "text": "Vulnerabilidade..."},
+        {"label": "E", "text": "Compromissos internacionais..."}
+      ],
+      "answer_type": "single",
+      "answer_key": "A",
+      "rationales": {
+        "A": "Correta como INCORRETA. Magnitude não se restringe à letalidade; inclui incidência e prevalência.",
+        "B": "Correta.",
+        "C": "Correta.",
+        "D": "Correta.",
+        "E": "Correta."
+      }
+    },
+    {
+      "id": "UFV-2022-SP4-0003",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["RAIVA", "ZOONOSES"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "A raiva é uma zoonose viral... 'sentido da transmissão'... considerada uma antropozoonose. PORQUE ... transmitida ao homem, por reservatório animal... ciclos aéreo, rural, urbano e silvestre terrestre. Assinale: (A) ... (E).",
+      "options": [
+        {"label": "A", "text": "Verdadeiras e justificativa correta."},
+        {"label": "B", "text": "Verdadeiras, sem justificativa."},
+        {"label": "C", "text": "Primeira verdadeira, segunda falsa."},
+        {"label": "D", "text": "Primeira falsa e segunda verdadeira."},
+        {"label": "E", "text": "Ambas falsas."}
+      ],
+      "answer_type": "single",
+      "answer_key": "D",
+      "rationales": {
+        "D": "Correta. Raiva é zooantroponose (animal→humano), não antropozoonose. A descrição dos ciclos e de transmissão por reservatório animal está correta."
+      }
+    },
+    {
+      "id": "UFV-2022-SP4-0004",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["INDICADORES", "EPIDEMIOLOGIA"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Assinale a resposta INCORRETA acerca dos indicadores epidemiológicos: (A) coeficientes de morbidade... (B) incidência... (C) taxa de letalidade... (D) coeficiente de mortalidade... (E) prevalência...",
+      "options": [
+        {"label": "A", "text": "Coeficientes de morbidade..."},
+        {"label": "B", "text": "Incidência..."},
+        {"label": "C", "text": "Taxa de letalidade indica a probabilidade de morte de um indivíduo..."},
+        {"label": "D", "text": "Coeficiente de mortalidade..."},
+        {"label": "E", "text": "Prevalência..."}
+      ],
+      "answer_type": "single",
+      "answer_key": "C",
+      "rationales": {"C": "Correta como INCORRETA. Letalidade mede mortes entre os doentes; 'probabilidade de morte na população' é mortalidade."}
+    },
+    {
+      "id": "UFV-2022-SP4-0005",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["SUS", "PRINCÍPIOS"],
+      "difficulty": "M",
+      "cognitive_level": "Aplicação",
+      "stem": "Princípios doutrinários do SUS: relacione (A) Universalidade (B) Integralidade (C) Igualdade (D) Equidade com as sentenças listadas e assinale a sequência correta.",
+      "options": [
+        {"label": "A", "text": "C – A – B – C – A – B – A"},
+        {"label": "B", "text": "D – B – A – C – B – A – D"},
+        {"label": "C", "text": "C – B – A – D – D – D – C"},
+        {"label": "D", "text": "D – A – B – C – D – B – D"},
+        {"label": "E", "text": "B – C – D – D – A – B – C"}
+      ],
+      "answer_type": "single",
+      "answer_key": "D",
+      "rationales": {"D": "Sequência correta: Equidade, Universalidade, Integralidade, Igualdade, Equidade, Integralidade, Equidade."}
+    },
+    {
+      "id": "UFV-2022-SP4-0006",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["CONTROLE DE ROEDORES"],
+      "difficulty": "F",
+      "cognitive_level": "Aplicação",
+      "stem": "Medidas de ANTIRRATIZAÇÃO (A) ou DESRATIZAÇÃO (D): ( ) Eliminar abrigos; ( ) Ratoeiras; ( ) Reduzir água/alimento; ( ) Remover sobras de ração à noite; ( ) Raticidas. Assinale a sequência correta.",
+      "options": [
+        {"label": "A", "text": "D – A – D – D – A"},
+        {"label": "B", "text": "D – D – A – A – D"},
+        {"label": "C", "text": "A – D – A – D – A"},
+        {"label": "D", "text": "A – D – A – A – D"},
+        {"label": "E", "text": "A – A – D – D – A"}
+      ],
+      "answer_type": "single",
+      "answer_key": "D",
+      "rationales": {"D": "Antirratização: eliminar abrigos, reduzir água/ alimento, retirar sobras; Desratização: ratoeiras e raticidas."}
+    },
+    {
+      "id": "UFV-2022-SP4-0007",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["RAS", "ATENÇÃO PRIMÁRIA"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Redes de Atenção à Saúde (RAS) – marque a INCORRETA.",
+      "options": [
+        {"label": "A", "text": "Atenção Básica ... promoção, prevenção, diagnóstico, tratamento, reabilitação."},
+        {"label": "B", "text": "Objetivo da AB ... atenção integral ... determinantes de saúde."},
+        {"label": "C", "text": "NASF com presença OBRIGATÓRIA de médico veterinário."},
+        {"label": "D", "text": "Composição mínima da eSF."},
+        {"label": "E", "text": "Atribuições do ACS."}
+      ],
+      "answer_type": "single",
+      "answer_key": "C",
+      "rationales": {"C": "Incorreta. Presença do médico-veterinário é opcional e definida pelo gestor segundo necessidades locais."}
+    },
+    {
+      "id": "UFV-2022-SP4-0008",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["PANDEMIA", "DEFINIÇÕES"],
+      "difficulty": "F",
+      "cognitive_level": "Lembrar",
+      "stem": "Assinale a definição mais adequada para PANDEMIA.",
+      "options": [
+        {"label": "A", "text": "Doença viral de transmissão direta..."},
+        {"label": "B", "text": "Mortalidade maior que o esperado."},
+        {"label": "C", "text": "Incidência > 50% em diferentes países."},
+        {"label": "D", "text": "Endemia em muitos países e continentes."},
+        {"label": "E", "text": "Epidemia que afeta pessoas em muitos países e continentes."}
+      ],
+      "answer_type": "single",
+      "answer_key": "E",
+      "rationales": {"E": "Correta. Pandemia = epidemia em escala global (múltiplos países/continentes)."}
+    },
+    {
+      "id": "UFV-2022-SP4-0009",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["FEBRE MACULOSA", "EPIDEMIOLOGIA"],
+      "difficulty": "M",
+      "cognitive_level": "Aplicação",
+      "stem": "Relacione os trechos (1 a 6) do texto sobre febre maculosa com: agente etiológico; patogenicidade; período de incubação; período de transmissibilidade; virulência; reservatórios.",
+      "options": [
+        {"label": "A", "text": "2 – 1 – 3 – 4 – 6 – 5"},
+        {"label": "B", "text": "2 – 1 – 4 – 3 – 6 – 5"},
+        {"label": "C", "text": "2 – 3 – 4 – 5 – 1 – 6"},
+        {"label": "D", "text": "2 – 5 – 6 – 4 – 2 – 3"},
+        {"label": "E", "text": "2 – 3 – 4 – 5 – 3 – 6"}
+      ],
+      "answer_type": "single",
+      "answer_key": "B",
+      "rationales": {"B": "2 agente; 1 patogenicidade; 4 incubação; 3 transmissibilidade; 6 virulência (letalidade); 5 reservatórios."}
+    },
+    {
+      "id": "UFV-2022-SP4-0010",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["SAÚDE PÚBLICA"],
+      "topic_tags": ["LEISHMANIOSE TEGUMENTAR", "CONTROLE"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Tratamento de animais positivos não é medida aceita para controle da LTA. PORQUE pode selecionar parasitos resistentes às drogas usadas em humanos. Marque a alternativa correta.",
+      "options": [
+        {"label": "A", "text": "As duas verdadeiras e a segunda justifica a primeira."},
+        {"label": "B", "text": "Verdadeiras, sem relação de justificativa."},
+        {"label": "C", "text": "Verdadeira e falsa."},
+        {"label": "D", "text": "Falsa e verdadeira."},
+        {"label": "E", "text": "Ambas falsas."}
+      ],
+      "answer_type": "single",
+      "answer_key": "A",
+      "rationales": {"A": "Correta. A resistência é uma das principais razões para não tratar animais como medida de controle populacional."}
+    },
+    {
+      "id": "UFV-2022-CM4-0011",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["GASTROENTEROLOGIA"],
+      "difficulty": "F",
+      "cognitive_level": "Análise",
+      "stem": "Em relação às gastroenterites hemorrágicas: I A parvovirose não é a única causa... II O uso de antibióticos é contraindicado... III Nos gatos, o Parvovírus também é causa. Assinale: (A) I (B) II (C) III (D) I e II (E) I e III",
+      "options": [
+        {"label": "A", "text": "I"}, {"label": "B", "text": "II"}, {"label": "C", "text": "III"}, {"label": "D", "text": "I e II"}, {"label": "E", "text": "I e III"}
+      ],
+      "answer_type": "single",
+      "answer_key": "E",
+      "rationales": {"E": "I e III verdadeiras; II é falsa pois há risco de sepse (barreira intestinal + neutropenia)."}
+    },
+    {
+      "id": "UFV-2022-CM4-0012",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["CARDIOLOGIA", "ANTIARRÍTMICOS"],
+      "difficulty": "F",
+      "cognitive_level": "Aplicação",
+      "stem": "Fármaco com ação antiarrítmica (diminui condução e aumenta refratariedade AV) usado em TSV em cães.",
+      "options": [
+        {"label": "A", "text": "Lidocaína"}, {"label": "B", "text": "Benazepril"}, {"label": "C", "text": "Digoxina"}, {"label": "D", "text": "Pimobendan"}, {"label": "E", "text": "Torasemida"}
+      ],
+      "answer_type": "single",
+      "answer_key": "C",
+      "rationales": {"C": "Efeito vagomimético reduz condução no nó AV; útil em TSV (ex.: FA)."}
+    },
+    {
+      "id": "UFV-2022-CM4-0013",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["ANESTESIOLOGIA", "CÁLCULO DE DOSE"],
+      "difficulty": "F",
+      "cognitive_level": "Aplicação",
+      "stem": "Sedar cão 12 kg: acepromazina 0,2% (0,05 mg/kg) e butorfanol 1% (0,4 mg/kg). Volumes corretos, respectivamente:",
+      "options": [
+        {"label": "A", "text": "48 mL e 30 mL"}, {"label": "B", "text": "0,3 mL e 0,48 mL"}, {"label": "C", "text": "0,03 mL e 0,048 mL"}, {"label": "D", "text": "3 mL e 4,8 mL"}, {"label": "E", "text": "30 e 48 mL"}
+      ],
+      "answer_type": "single",
+      "answer_key": "B",
+      "rationales": {"B": "Acepromazina 0,2% = 2 mg/mL: 0,6 mg / 2 = 0,3 mL; Butorfanol 1% = 10 mg/mL: 4,8 /10 = 0,48 mL."}
+    },
+    {
+      "id": "UFV-2022-CM4-0014",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["HEMATOLOGIA"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Hemograma de cão: Ht 12%, VCM 63,1 fL, CHCM 35 g/dL, reticulócitos 9.000/µL. Assinale a correta.",
+      "options": [
+        {"label": "A", "text": "Anemia normocítica, hipocrômica e regenerativa"},
+        {"label": "B", "text": "Não apresenta anemia"},
+        {"label": "C", "text": "Anemia normocítica, normocrômica e não regenerativa"},
+        {"label": "D", "text": "Anemia microcítica, hipocrômica e não regenerativa"},
+        {"label": "E", "text": "Anemia macrocítica, normocrômica e regenerativa"}
+      ],
+      "answer_type": "single",
+      "answer_key": "C",
+      "rationales": {"C": "Ht muito baixo (anemia severa); VCM e CHCM normais; reticulócitos muito baixos → não regenerativa."}
+    },
+    {
+      "id": "UFV-2022-CM4-0015",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["LÍQUIDOS CAVITÁRIOS"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Classificação de fluidos cavitários – assinale a INCORRETA.",
+      "options": [
+        {"label": "A", "text": "Transudatos modificados: 1000–7000 células/µL"},
+        {"label": "B", "text": "Exsudatos: TNCC > 7000/µL e proteína > 3,0 g/dL"},
+        {"label": "C", "text": "Transudatos: incolores, baixa celularidade (<1500/µL)"},
+        {"label": "D", "text": "Transudatos modificados: baixa proteína (<1,5 g/dL)"},
+        {"label": "E", "text": "Exsudatos: sépticos ou assépticos conforme citologia"}
+      ],
+      "answer_type": "single",
+      "answer_key": "D",
+      "rationales": {"D": "Transudato modificado tem proteína intermediária (~2,5–5 g/dL); <1,5 g/dL caracteriza transudato puro."}
+    },
+    {
+      "id": "UFV-2022-CM4-0016",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["IMAGEM", "UROGRAFIA EXCRETORA"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Urografia excretora – indicada para, EXCETO:",
+      "options": [
+        {"label": "A", "text": "Função renal no paciente renal crônico"},
+        {"label": "B", "text": "Trauma com suspeita de ruptura ureteral"},
+        {"label": "C", "text": "Obstrução ureteral por cálculo radiotransparente"},
+        {"label": "D", "text": "Ureter ectópico em cadelas"},
+        {"label": "E", "text": "Obstrução ureteral por neoplasia no trígono"}
+      ],
+      "answer_type": "single",
+      "answer_key": "A",
+      "rationales": {"A": "UE avalia anatomia/patência; não quantifica função e pode agravar DRC (nefrotoxicidade)."}
+    },
+    {
+      "id": "UFV-2022-CM4-0017",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["REPRODUÇÃO", "GESTAÇÃO"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Avaliação gestacional em cadela e gata – assinale a VERDADEIRA.",
+      "options": [
+        {"label": "A", "text": "Confirmação por US no 14º dia"},
+        {"label": "B", "text": "Comprimento cabeça–cauda útil para idade fetal"},
+        {"label": "C", "text": "RX para número de fetos a partir do 20º dia"},
+        {"label": "D", "text": "US não avalia com exatidão o número de fetos"},
+        {"label": "E", "text": "US é suficiente para diagnosticar endometrite nas 2 primeiras semanas pós-parto"}
+      ],
+      "answer_type": "single",
+      "answer_key": "D",
+      "rationales": {"D": "Contagem fetal é mais precisa por radiografia após mineralização (~45º dia); US é impreciso para número."}
+    },
+    {
+      "id": "UFV-2022-CM4-0018",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["ANESTESIOLOGIA", "CAPNOGRAFIA"],
+      "difficulty": "F",
+      "cognitive_level": "Aplicação",
+      "stem": "Capnografia/capnometria – a seta indica:",
+      "options": [
+        {"label": "A", "text": "Hipocapnia"}, {"label": "B", "text": "Hipercapnia"}, {"label": "C", "text": "Hipoventilação"}, {"label": "D", "text": "Hiperventilação"}, {"label": "E", "text": "Normocapnometria"}
+      ],
+      "answer_type": "single",
+      "answer_key": "E",
+      "rationales": {"E": "Conforme gabarito indicado pelo solicitante: valor de EtCO2 em faixa normal (35–45 mmHg)."}
+    },
+    {
+      "id": "UFV-2022-CM4-0019",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["URINÁRIO", "OBSTRUÇÃO URETRAL"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Obstrução uretral felina – assinale o correto: I a V (ver enunciado).",
+      "options": [
+        {"label": "A", "text": "I e II"}, {"label": "B", "text": "II e III"}, {"label": "C", "text": "I, II e III"}, {"label": "D", "text": "I, III e IV"}, {"label": "E", "text": "II, III e V"}
+      ],
+      "answer_type": "single",
+      "answer_key": "B",
+      "rationales": {"B": "II (cistocentese de alívio) e III (indicação de uretrostomia em recorrência) corretas; as demais apresentam afirmações inadequadas."}
+    },
+    {
+      "id": "UFV-2022-CM4-0020",
+      "year": 2022,
+      "exam": "UFV",
+      "area_tags": ["CLÍNICA MÉDICA"],
+      "topic_tags": ["NEONATOLOGIA", "REANIMAÇÃO"],
+      "difficulty": "M",
+      "cognitive_level": "Análise",
+      "stem": "Manejo emergencial do neonato canino/felino pós-cesariana – assinale a INCORRETA.",
+      "options": [
+        {"label": "A", "text": "Atropina não é recomendada; usar adrenalina em bradicardia < 100 bpm"},
+        {"label": "B", "text": "Manter fluxo placenta–neonato por até 3 minutos"},
+        {"label": "C", "text": "Aminofilina pode estimular respiração"},
+        {"label": "D", "text": "VPP com monitorização de pressões para evitar colapso"},
+        {"label": "E", "text": "Administrar glicose imediatamente após o nascimento"}
+      ],
+      "answer_type": "single",
+      "answer_key": "E",
+      "rationales": {"E": "Incorreta. Hipoglicemia é problema tardio; administração imediata de glicose não é indicada rotineiramente."}
+    }
+  ]
+}
+
