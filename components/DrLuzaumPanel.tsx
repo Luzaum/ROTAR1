@@ -123,12 +123,12 @@ export const DrLuzaumPanel: React.FC<Props> = ({ question }) => {
   }, [question])
 
   return (
-    <div className="relative rounded-2xl border border-sky-400/30 bg-[rgba(10,25,50,0.6)] backdrop-blur-xl shadow-[0_10px_40px_rgba(0,20,60,0.5)] overflow-hidden text-white">
+    <div className="relative rounded-2xl backdrop-blur-md bg-slate-900/70 border border-slate-700 shadow-[0_10px_40px_rgba(0,20,60,0.5)] overflow-hidden text-white">
       <div className="absolute inset-0 pointer-events-none" aria-hidden>
         <div className="absolute -top-20 -right-20 w-72 h-72 bg-sky-500/20 rounded-full blur-3xl" />
         <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-blue-700/20 rounded-full blur-3xl" />
       </div>
-      <div className="relative border-b border-sky-400/30 px-5 py-4">
+      <div className="relative border-b border-slate-600 px-5 py-4">
         <h3 className="text-white font-semibold text-lg">Olá, sou o Dr. Luzaum — vamos revisar juntos?</h3>
         <p className="text-white/85 text-sm"><span className="font-semibold">Tema:</span> {(question.topic_tags && question.topic_tags.length) ? question.topic_tags.join(', ') : question.area_tags.join(', ')}</p>
       </div>
@@ -147,16 +147,29 @@ export const DrLuzaumPanel: React.FC<Props> = ({ question }) => {
           </div>
         )}
         {error && <div className="text-sm text-red-300">{error}</div>}
-        <div className="rounded-lg border border-sky-400/30 bg-[rgba(10,25,50,0.35)] p-3 max-h-[60vh] overflow-y-auto">
+        <div className="rounded-lg border border-slate-600 bg-slate-800/50 p-3 max-h-[60vh] overflow-y-auto">
           {history.map((m, i) => (
             <div key={i} className={"mb-2 rounded-md p-2 " + (m.role === 'assistant' ? 'bg-sky-500/20' : m.role === 'user' ? 'bg-blue-900/30' : '')}>
               <div className="text-xs opacity-70 mb-1 text-white">{m.role === 'assistant' ? 'Dr. Luzaum' : m.role === 'user' ? 'Você' : 'Sistema'}</div>
-              <div className="prose prose-slate dark:prose-invert max-w-none prose-headings:text-white prose-strong:text-white prose-p:text-white prose-li:text-white prose-blockquote:text-white prose-code:text-white prose-h1:text-white prose-h2:text-white prose-h3:text-white prose-h4:text-white prose-h5:text-white prose-h6:text-white prose-em:text-white prose-span:text-white whitespace-pre-wrap">
+              <div className="prose prose-sm dark:prose-invert max-w-none prose-headings:text-white prose-strong:text-white prose-p:text-white prose-li:text-white prose-blockquote:text-white prose-code:text-white prose-h1:text-white prose-h2:text-white prose-h3:text-white prose-h4:text-white prose-h5:text-white prose-h6:text-white prose-em:text-white prose-span:text-white whitespace-pre-wrap">
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>{m.content}</ReactMarkdown>
               </div>
             </div>
           ))}
         </div>
+        
+        {/* Seção de Citações */}
+        {!loading && history.length > 1 && (
+          <div className="mt-4 p-3 rounded-lg border border-slate-600 bg-slate-800/50">
+            <h4 className="font-semibold text-white mb-2">📚 Livros usados na revisão:</h4>
+            <ul className="text-sm text-white/80 space-y-1">
+              <li>• Nelson & Couto - Medicina Interna de Pequenos Animais</li>
+              <li>• Ettinger & Feldman - Tratado de Medicina Interna Veterinária</li>
+              <li>• Tilley & Smith - Manual de Cardiologia para Cães e Gatos</li>
+              <li>• Fossum - Cirurgia de Pequenos Animais</li>
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   )
