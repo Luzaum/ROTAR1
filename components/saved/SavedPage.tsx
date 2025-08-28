@@ -1,13 +1,30 @@
 import React, { useState } from 'react'
-import { getSavedQuestions, toggleSaved, getNote } from '../../utils/localStorage'
 import { Bookmark, Trash2 } from 'lucide-react'
+import { useQuestionState, useQuestionDispatch } from '../../context/QuestionContext'
+import { ExpandableQuestion } from '../review/ExpandableQuestion'
+import { DrLuzaumPanel } from '../DrLuzaumPanel'
+import { SimpleQuestion } from '../../types'
 
 export function SavedPage() {
   const [editMode, setEditMode] = useState(false)
   const [selectedToDelete, setSelectedToDelete] = useState<string[]>([])
   const [showConfirmDialog, setShowConfirmDialog] = useState(false)
+  const [questionForReview, setQuestionForReview] = useState<SimpleQuestion | null>(null)
 
-  const savedQuestions = getSavedQuestions()
+  const { questions } = useQuestionState()
+  const dispatch = useQuestionDispatch()
+  
+  const savedQuestions = questions.filter(q => q.isSaved)
+
+  const openDrLuzaum = (question: SimpleQuestion) => {
+    setQuestionForReview(question);
+  };
+
+  const closeDrLuzaum = () => {
+    setQuestionForReview(null);
+  };
+
+
 
   const handleToggleSelection = (questionId: string) => {
     setSelectedToDelete(prev => 
@@ -19,7 +36,7 @@ export function SavedPage() {
 
   const handleDeleteSelected = () => {
     selectedToDelete.forEach(questionId => {
-      toggleSaved(questionId)
+      dispatch({ type: 'TOGGLE_SAVE', payload: { questionId } })
     })
     setSelectedToDelete([])
     setEditMode(false)
@@ -61,49 +78,21 @@ export function SavedPage() {
       ) : (
         <div className="space-y-4">
           {savedQuestions.map((question) => (
-            <div
-              key={question.id}
-              className={`bg-card border rounded-lg p-4 transition-colors ${
-                editMode && selectedToDelete.includes(question.id)
-                  ? 'border-primary bg-primary/5'
-                  : 'hover:bg-accent/50'
-              }`}
-            >
-              <div className="flex items-start gap-4">
-                {editMode && (
+            <div key={question.id} className="relative">
+              {editMode && (
+                <div className="absolute top-2 left-2 z-10">
                   <input
                     type="checkbox"
                     checked={selectedToDelete.includes(question.id)}
                     onChange={() => handleToggleSelection(question.id)}
-                    className="mt-1"
+                    className="w-4 h-4"
                   />
-                )}
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Bookmark className="h-4 w-4 text-primary fill-current" />
-                    <span className="text-sm text-muted-foreground">
-                      {question.faculty} - {question.year}
-                    </span>
-                    <span className="text-sm text-muted-foreground">
-                      {question.area} - {question.theme}
-                    </span>
-                  </div>
-                  <h3 className="font-medium mb-2">{question.question}</h3>
-                  {getNote(question.id) && (
-                    <div className="bg-muted/50 rounded p-2 text-sm">
-                      <strong>Nota:</strong> {getNote(question.id)}
-                    </div>
-                  )}
                 </div>
-                {editMode && (
-                  <button
-                    onClick={() => handleToggleSelection(question.id)}
-                    className="p-1 text-red-600 hover:bg-red-50 rounded"
-                  >
-                    <Trash2 size={16} />
-                  </button>
-                )}
-              </div>
+              )}
+              <ExpandableQuestion 
+                question={question} 
+                onDrLuzaumClick={() => openDrLuzaum(question)}
+              />
             </div>
           ))}
         </div>
@@ -135,8 +124,22 @@ export function SavedPage() {
           </div>
         </div>
       )}
+
+      {/* Modal Dr. Luzaum */}
+      {questionForReview && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="fixed inset-0 bg-background/80 backdrop-blur-sm" onClick={closeDrLuzaum} />
+          <div className="relative w-full max-w-4xl max-h-[90vh] overflow-hidden">
+            <DrLuzaumPanel
+              question={questionForReview as any}
+              onClose={closeDrLuzaum}
+            />
+          </div>
+        </div>
+      )}
     </div>
   )
 }
+
 
 

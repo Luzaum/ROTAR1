@@ -8,15 +8,27 @@ import {
   Tooltip,
 } from 'recharts'
 import { useNavigate } from 'react-router-dom'
-import { getAppData } from '../../utils/localStorage'
+
 
 export function PerformanceRadarChart() {
   const navigate = useNavigate()
-  const appData = getAppData()
+
+  // Função segura para carregar dados de estatísticas
+  const loadStatistics = () => {
+    try {
+      const stored = localStorage.getItem('rota-r1-data');
+      const data = stored ? JSON.parse(stored) : {};
+      return data.statistics || {};
+    } catch {
+      return {};
+    }
+  }
+
+  const statistics = loadStatistics()
 
   // Calculate performance data from statistics
   const calculateAreaPerformance = (areaName: string) => {
-    const stats = appData.statistics.areaStats[areaName]
+    const stats = statistics.areaStats?.[areaName]
     if (!stats || stats.answered === 0) return 0
     return Math.round((stats.correct / stats.answered) * 100)
   }
@@ -60,11 +72,20 @@ export function PerformanceRadarChart() {
   ]
 
   const handleAreaClick = (area: string) => {
-    navigate('/estatisticas', {
-      state: {
-        selectedArea: area,
-      },
-    })
+    const areaMap: Record<string, string> = {
+      'Clínica Médica': 'clinica-medica',
+      'Clínica Cirúrgica': 'clinica-cirurgica',
+      'Diagnóstico por Imagem': 'diagnostico-imagem',
+      'Anestesiologia': 'anestesiologia',
+      'Laboratório Clínico': 'laboratorio-clinico',
+      'Saúde Pública': 'saude-publica',
+      'Patologia': 'patologia',
+    }
+    
+    const areaId = areaMap[area]
+    if (areaId) {
+      navigate(`/estatisticas?area=${areaId}`)
+    }
   }
 
   return (

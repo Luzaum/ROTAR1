@@ -1,60 +1,29 @@
-import React, { useEffect, useState, useCallback } from 'react'
-import { Minimize, Star, Bookmark, Clock, ChevronRight } from 'lucide-react'
-import { DrLuzaumModal } from './DrLuzaumModal'
-import { ActionButton } from '../ui/ActionButton'
-import {
-  toggleFavorite,
-  toggleSaved,
-  saveNote,
-  getNote,
-  isFavorite,
-  isSaved,
-  updateStatistics,
-} from '../../utils/localStorage'
+import React, { useState, useEffect, useCallback } from 'react';
+import { ActionIconButton } from '../ui/ActionIconButton';
+import { useQuestionDispatch } from '../../context/QuestionContext';
+import { SimpleQuestion } from '../../types';
+import { Minimize, Clock, ChevronRight } from 'lucide-react';
+import { DrLuzaumModal } from './DrLuzaumModal';
 
-interface Alternative {
-  id: string
-  text: string
-  isCorrect: boolean
-  explanation: string
-}
-
-interface Question {
-  id: string
-  faculty?: string
-  year?: string
-  title?: string
-  area?: string
-  theme?: string
-  question: string
-  alternatives: Alternative[]
-  explanation?: string
-}
+// REMOVA QUALQUER IMPORT de 'localStorage.ts'
 
 interface QuestionCardProps {
-  question: Question
-  isFocusMode: boolean
-  onExitFocusMode: () => void
-  onNextQuestion?: () => void
+  question: SimpleQuestion;
+  isFocusMode: boolean;
+  onExitFocusMode: () => void;
+  onNextQuestion?: () => void;
 }
 
-export function QuestionCard({
-  question,
-  isFocusMode,
-  onExitFocusMode,
-  onNextQuestion,
-}: QuestionCardProps) {
-  // Estados principais para controlar o fluxo da questão
-  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
-  const [isRevealed, setIsRevealed] = useState<boolean>(false)
+export function QuestionCard({ question, isFocusMode, onExitFocusMode, onNextQuestion }: QuestionCardProps) {
+  const dispatch = useQuestionDispatch();
   
-  // Estados secundários
-  const [isFav, setIsFav] = useState<boolean>(false)
-  const [isSav, setIsSav] = useState<boolean>(false)
-  const [note, setNote] = useState<string>('')
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
-  const [timer, setTimer] = useState<number>(0)
-  const [timerActive, setTimerActive] = useState<boolean>(true)
+  // Estados locais APENAS para a interação DENTRO desta questão
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const [isRevealed, setIsRevealed] = useState<boolean>(false);
+  const [note, setNote] = useState(question.note || '');
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [timer, setTimer] = useState<number>(0);
+  const [timerActive, setTimerActive] = useState<boolean>(true);
 
   // Carregar estado inicial quando a questão muda
   useEffect(() => {
@@ -62,23 +31,13 @@ export function QuestionCard({
     setSelectedAnswer(null)
     setIsRevealed(false)
     
-    // Carregar estados do localStorage
-    try {
-      setIsFav(isFavorite(question.id))
-      setIsSav(isSaved(question.id))
-      setNote(getNote(question.id))
-    } catch (error) {
-      console.error('Erro ao carregar dados do localStorage:', error)
-      // Fallback para valores padrão
-      setIsFav(false)
-      setIsSav(false)
-      setNote('')
-    }
-    
     // Resetar timer
     setTimer(0)
     setTimerActive(true)
-  }, [question.id])
+    
+    // Carregar anotação da questão
+    setNote(question.note || '')
+  }, [question.id, question.note])
 
   // Timer effect
   useEffect(() => {
@@ -91,57 +50,57 @@ export function QuestionCard({
     return () => clearInterval(intervalId)
   }, [timerActive])
 
-  // Função para selecionar uma resposta
-  const handleSelectAnswer = useCallback((answerId: string) => {
-    if (!isRevealed) {
-      setSelectedAnswer(answerId)
-    }
-  }, [isRevealed])
+  // Efeito para salvar a nota quando o usuário para de digitar
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      if (note !== question.note) {
+        dispatch({ type: 'UPDATE_NOTE', payload: { questionId: question.id, note } });
+      }
+    }, 1000); // Salva 1 segundo após a última digitação
 
-  // Função para confirmar e revelar a resposta
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [note, question.id, question.note, dispatch]);
+
+
+
+  // Funções que disparam ações para o estado global. Elas não afetam mais a questão atual.
+  const handleToggleFavorite = useCallback(() => {
+    dispatch({ type: 'TOGGLE_FAVORITE', payload: { questionId: question.id } });
+  }, [dispatch, question.id]);
+
+  const handleToggleSave = useCallback(() => {
+    dispatch({ type: 'TOGGLE_SAVE', payload: { questionId: question.id } });
+  }, [dispatch, question.id]);
+
+  // Funções de interação local
+  const handleSelectAnswer = (answerId: string) => {
+    if (!isRevealed) {
+      setSelectedAnswer(answerId);
+    }
+  };
+
   const handleConfirmAnswer = useCallback(() => {
     if (selectedAnswer && !isRevealed) {
-      setIsRevealed(true)
-      setTimerActive(false)
+      setIsRevealed(true);
+      setTimerActive(false);
       
-      try {
-        // Atualizar estatísticas
-        const isCorrect = question.alternatives.find(alt => alt.id === selectedAnswer)?.isCorrect || false
-        updateStatistics(question.id, isCorrect, timer)
-      } catch (error) {
-        console.error('Erro ao atualizar estatísticas:', error)
-      }
+      // LÓGICA DE ESTATÍSTICAS REATIVADA DE FORMA SEGURA E CENTRALIZADA
+      const isCorrect = question.alternatives.find(alt => alt.id === selectedAnswer)?.isCorrect || false;
+      
+      // Despacha a ação para o cérebro global do aplicativo
+      dispatch({ 
+        type: 'RECORD_ANSWER', 
+        payload: { questionId: question.id, isCorrect } 
+      });
     }
-  }, [selectedAnswer, isRevealed, question.id, question.alternatives, timer])
+  }, [selectedAnswer, isRevealed, question, dispatch]);
 
-  // Função para alternar favorito
-  const handleToggleFavorite = useCallback(() => {
-    try {
-      const newState = toggleFavorite(question.id)
-      setIsFav(newState)
-    } catch (error) {
-      console.error('Erro ao alternar favorito:', error)
-    }
-  }, [question.id])
-
-  // Função para alternar salvo
-  const handleToggleSaved = useCallback(() => {
-    try {
-      const newState = toggleSaved(question.id)
-      setIsSav(newState)
-    } catch (error) {
-      console.error('Erro ao alternar salvo:', error)
-    }
-  }, [question.id])
-
-  // Função para salvar nota
+  // Função para salvar nota (agora integrada ao Context)
   const handleSaveNote = useCallback(() => {
-    try {
-      saveNote(question.id, note)
-    } catch (error) {
-      console.error('Erro ao salvar nota:', error)
-    }
-  }, [question.id, note])
+    dispatch({ type: 'UPDATE_NOTE', payload: { questionId: question.id, note } });
+  }, [dispatch, question.id, note])
 
   // Função para próxima questão
   const handleNextQuestion = useCallback(() => {
@@ -293,30 +252,16 @@ export function QuestionCard({
 
             {/* Ações da Questão */}
             <div className="border-t pt-4 flex flex-wrap gap-4">
-              <div className="flex items-center gap-2">
-                <ActionButton
-                  isToggled={isFav}
-                  onClick={handleToggleFavorite}
-                  toggledClassName="text-yellow-400 fill-yellow-400"
-                >
-                  <Star size={18} />
-                </ActionButton>
-                <span className={isFav ? 'text-yellow-500' : ''}>
-                  {isFav ? 'Favoritada' : 'Favoritar'}
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <ActionButton
-                  isToggled={isSav}
-                  onClick={handleToggleSaved}
-                  toggledClassName="text-blue-500 fill-blue-500"
-                >
-                  <Bookmark size={18} />
-                </ActionButton>
-                <span className={isSav ? 'text-primary' : ''}>
-                  {isSav ? 'Salva' : 'Salvar'}
-                </span>
-              </div>
+              <ActionIconButton
+                type="favorite"
+                isToggled={question.isFavorited || false}
+                onClick={handleToggleFavorite}
+              />
+                             <ActionIconButton
+                 type="save"
+                 isToggled={question.isSaved || false}
+                 onClick={handleToggleSave}
+               />
               <div className="flex-1">
                 <textarea
                   value={note}

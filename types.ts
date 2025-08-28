@@ -64,6 +64,7 @@ export interface TrainingQuestion {
   rationale: string;
 }
 
+// Tipo para questões do banco de dados completo
 export interface Question {
   id: string;
   year: number;
@@ -87,6 +88,29 @@ export interface Question {
   status: 'approved' | 'pending' | 'rejected';
   version: number;
   issues: string[];
+  isFavorited?: boolean;
+  isSaved?: boolean;
+}
+
+// Tipo para questões simplificadas (usado nos componentes)
+export interface SimpleQuestion {
+  id: string;
+  faculty?: string;
+  year?: string;
+  title?: string;
+  area?: string;
+  theme?: string;
+  question: string;
+  alternatives: {
+    id: string;
+    text: string;
+    isCorrect: boolean;
+    explanation: string;
+  }[];
+  explanation?: string;
+  isFavorited?: boolean;
+  isSaved?: boolean;
+  note?: string; // Campo para anotações do usuário
 }
 
 export interface Attempt {
@@ -97,6 +121,11 @@ export interface Attempt {
 }
 
 export type AppMode = 'home' | 'quiz' | 'browse' | 'review' | 'errors' | 'stats' | 'sim' | 'favorites';
+
+export interface AnswerStatistic {
+  attempts: number;
+  correct: number;
+}
 
 export interface Stats {
   total: number;

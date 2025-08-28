@@ -1,6 +1,6 @@
-import { Question } from '../utils/localStorage'
+import { SimpleQuestion } from '../types'
 
-export const sampleQuestions: Question[] = [
+export const sampleQuestions: SimpleQuestion[] = [
   {
     id: '1',
     faculty: 'UFV',

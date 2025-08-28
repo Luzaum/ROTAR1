@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Search, Filter } from 'lucide-react'
-import { getAppData } from '../../utils/localStorage'
+import { useQuestionState } from '../../context/QuestionContext'
 import { AcervoQuestionCard } from './AcervoQuestionCard'
 
 export function AcervoPage() {
@@ -8,8 +8,7 @@ export function AcervoPage() {
   const [selectedArea, setSelectedArea] = useState<string>('Todas')
   const [isFilterOpen, setIsFilterOpen] = useState(false)
 
-  const appData = getAppData()
-  const questions = appData.questions
+  const { questions } = useQuestionState()
 
   const areas = ['Todas', 'Clínica Médica', 'Clínica Cirúrgica', 'Diagnóstico por Imagem', 'Anestesiologia', 'Laboratório Clínico', 'Saúde Pública']
 

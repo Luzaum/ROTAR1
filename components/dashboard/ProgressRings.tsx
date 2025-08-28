@@ -1,5 +1,4 @@
 import React from 'react'
-import { getAppData } from '../../utils/localStorage'
 
 interface ProgressRingProps {
   percentage: number
@@ -52,8 +51,18 @@ function ProgressRing({ percentage, size, strokeWidth, color, label }: ProgressR
 }
 
 export function ProgressRings() {
-  const appData = getAppData()
-  const stats = appData.statistics
+  // Função segura para carregar dados de estatísticas
+  const loadStatistics = () => {
+    try {
+      const stored = localStorage.getItem('rota-r1-data');
+      const data = stored ? JSON.parse(stored) : {};
+      return data.statistics || {};
+    } catch {
+      return {};
+    }
+  }
+
+  const stats = loadStatistics()
 
   // Calculate percentages
   const totalQuestions = stats.totalAnswered

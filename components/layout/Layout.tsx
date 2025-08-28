@@ -23,7 +23,9 @@ export function Layout({ children }: LayoutProps) {
         <div className="md:hidden flex items-center justify-between h-16 px-4 border-b">
           <div className="flex items-center">
             <div className="flex items-center gap-2">
-              <h1 className="logo-neon text-lg">Rota R1</h1>
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text animate-gradient-pan">
+                Rota R1
+              </h1>
             </div>
           </div>
           <div className="flex items-center gap-2">

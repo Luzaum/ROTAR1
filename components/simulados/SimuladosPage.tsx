@@ -1,10 +1,19 @@
 import React, { useState } from 'react'
-import { getSimuladoResults } from '../../utils/localStorage'
 import { Clock, Users, BarChart3 } from 'lucide-react'
 
 interface Area {
   id: string
   name: string
+}
+
+// Função segura para carregar resultados de simulados
+const loadSimuladoResults = () => {
+  try {
+    const stored = localStorage.getItem('rota-r1-simulado-results');
+    return stored ? JSON.parse(stored) : [];
+  } catch {
+    return [];
+  }
 }
 
 export function SimuladosPage() {
@@ -15,7 +24,7 @@ export function SimuladosPage() {
   const [selectedAreas, setSelectedAreas] = useState<string[]>([])
   const [countsByArea, setCountsByArea] = useState<Record<string, number>>({})
   
-  const simuladoResults = getSimuladoResults()
+  const simuladoResults = loadSimuladoResults()
 
   const areas: Area[] = [
     { id: 'clinica-medica', name: 'Clínica Médica' },

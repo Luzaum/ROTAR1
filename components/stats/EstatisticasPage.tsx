@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { getAppData } from '../../utils/localStorage'
+
 import { PerformanceRadarChart } from '../dashboard/PerformanceRadarChart'
 import { ProgressRings } from '../dashboard/ProgressRings'
 import { ChevronDown, TrendingUp, TrendingDown, Target } from 'lucide-react'
@@ -18,8 +18,18 @@ export function EstatisticasPage() {
   const [selectedArea, setSelectedArea] = useState<string>('clinica-medica')
   const [isAreaDropdownOpen, setIsAreaDropdownOpen] = useState(false)
   
-  const appData = getAppData()
-  const stats = appData.statistics
+  // Função segura para carregar dados de estatísticas
+  const loadStatistics = () => {
+    try {
+      const stored = localStorage.getItem('rota-r1-data');
+      const data = stored ? JSON.parse(stored) : {};
+      return data.statistics || {};
+    } catch {
+      return {};
+    }
+  }
+
+  const stats = loadStatistics()
 
   // Áreas disponíveis
   const areas = [

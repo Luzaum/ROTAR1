@@ -1,11 +1,29 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { Send, Bot, User } from 'lucide-react'
-import { saveDrLuzaumMessage, getDrLuzaumChat } from '../../utils/localStorage'
 
 interface Message {
   role: 'user' | 'assistant'
   content: string
   timestamp: number
+}
+
+// Função segura para ler o chat do localStorage
+const loadChatHistory = (): Message[] => {
+  try {
+    const stored = localStorage.getItem('rota-r1-drluzaum-chat');
+    return stored ? JSON.parse(stored) : [];
+  } catch {
+    return [];
+  }
+}
+
+// Função segura para salvar o chat
+const saveChatHistory = (chat: Message[]) => {
+  try {
+    localStorage.setItem('rota-r1-drluzaum-chat', JSON.stringify(chat));
+  } catch (error) {
+    console.error('Erro ao salvar chat:', error);
+  }
 }
 
 export function DrLuzaumPage() {
@@ -16,13 +34,18 @@ export function DrLuzaumPage() {
 
   // Load chat history
   useEffect(() => {
-    const chatHistory = getDrLuzaumChat('general')
+    const chatHistory = loadChatHistory()
     setMessages(chatHistory)
   }, [])
 
   // Auto-scroll to bottom
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }, [messages])
+
+  // Save chat history whenever messages change
+  useEffect(() => {
+    saveChatHistory(messages)
   }, [messages])
 
   const handleSendMessage = async () => {
@@ -35,7 +58,6 @@ export function DrLuzaumPage() {
     }
 
     setMessages(prev => [...prev, userMessage])
-    saveDrLuzaumMessage('general', 'user', inputValue)
     setInputValue('')
     setIsLoading(true)
 
@@ -47,7 +69,6 @@ export function DrLuzaumPage() {
         timestamp: Date.now(),
       }
       setMessages(prev => [...prev, aiResponse])
-      saveDrLuzaumMessage('general', 'assistant', aiResponse.content)
       setIsLoading(false)
     }, 1000 + Math.random() * 2000)
   }
@@ -179,5 +200,6 @@ export function DrLuzaumPage() {
     </div>
   )
 }
+
 
 

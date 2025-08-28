@@ -1,6 +1,8 @@
 
 import React, { useEffect } from 'react'
+import { BrowserRouter } from 'react-router-dom'
 import { Layout } from './components/layout/Layout'
+import { WaveBackground } from './components/ui/WaveBackground'
 import { Dashboard } from './components/dashboard/Dashboard'
 import { StudyPage } from './components/study/StudyPage'
 import { EstatisticasPage } from './components/stats/EstatisticasPage'
@@ -10,8 +12,7 @@ import { DrLuzaumPage } from './components/drluzaum/DrLuzaumPage'
 import { SimuladosPage } from './components/simulados/SimuladosPage'
 import { AcervoPage } from './components/acervo/AcervoPage'
 import { Routes, Route, useLocation } from 'react-router-dom'
-import { initializeQuestionBank } from './utils/localStorage'
-import { sampleQuestions } from './data/sampleQuestions'
+
 import { AnimatePresence, motion } from 'framer-motion'
 
 // Page transition wrapper component
@@ -115,14 +116,14 @@ function AnimatedRoutes() {
 }
 
 export function App() {
-  // Initialize question bank with sample questions
-  useEffect(() => {
-    initializeQuestionBank(sampleQuestions)
-  }, [])
-
   return (
-    <Layout>
-      <AnimatedRoutes />
-    </Layout>
+    <BrowserRouter>
+      <WaveBackground />
+      <div className="relative z-10">
+        <Layout>
+          <AnimatedRoutes />
+        </Layout>
+      </div>
+    </BrowserRouter>
   )
 }

@@ -8,14 +8,17 @@ import remarkGfm from 'remark-gfm'
 import { API_BASE } from '../lib/apiBase'
 
 interface Props {
-  question: Question
+  question: Question | null
+  onClose?: () => void
 }
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <h5 className="mt-4 mb-2 text-base font-semibold text-foreground">{children}</h5>
 )
 
-export const DrLuzaumPanel: React.FC<Props> = ({ question }) => {
+export const DrLuzaumPanel: React.FC<Props> = ({ question, onClose }) => {
+  // Verificação de segurança: não renderiza nada se não houver questão
+  if (!question) return null;
   const [loading, setLoading] = useState<boolean>(true)
   const [error, setError] = useState<string | null>(null)
   const [history, setHistory] = useState<ChatMessage[]>([])
@@ -36,10 +39,10 @@ export const DrLuzaumPanel: React.FC<Props> = ({ question }) => {
         try {
           const header = [
             '👋 Olá, sou o **Dr. Luzaum** — vamos revisar juntos?',
-            `**Tema:** ${(question.topic_tags && question.topic_tags.length) ? question.topic_tags.join(', ') : question.area_tags.join(', ')}`,
+            `**Tema:** ${(question.topic_tags && question.topic_tags.length) ? question.topic_tags.join(', ') : (question.area_tags && question.area_tags.length) ? question.area_tags.join(', ') : 'Tema não especificado'}`,
             `**Nível:** ${question.difficulty === 'F' ? 'Fácil' : question.difficulty === 'M' ? 'Médio' : 'Difícil'}`,
-            `**Fonte:** ${question.exam}-${question.year}`,
-            `**Área:** ${question.area_tags.join(', ')}`,
+            `**Fonte:** ${question.exam || 'N/A'}-${question.year || 'N/A'}`,
+            `**Área:** ${(question.area_tags && question.area_tags.length) ? question.area_tags.join(', ') : 'Área não especificada'}`,
             '---'
           ].join('\n')
           setHistory([{ role: 'assistant', content: header }])
@@ -61,11 +64,14 @@ export const DrLuzaumPanel: React.FC<Props> = ({ question }) => {
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
                 questao_id: question.id,
-                enunciado: question.stem,
-                alternativas: question.options.map(o => ({ letra: o.label, texto: o.text })),
-                alternativa_correta: question.answer_key,
+                enunciado: question.stem || "Enunciado não disponível",
+                alternativas: (question.options || []).map(o => ({ 
+                  letra: o.label, 
+                  texto: o.text 
+                })),
+                alternativa_correta: question.answer_key || "A",
                 alternativa_marcada_pelo_usuario: undefined,
-                area_conhecimento: (question.area_tags[0] || '').toLowerCase(),
+                area_conhecimento: ((question.area_tags && question.area_tags.length > 0) ? question.area_tags[0] : '').toLowerCase(),
                 especie_alvo: 'ambos',
                 contexto_extra: ''
               })
@@ -96,7 +102,7 @@ export const DrLuzaumPanel: React.FC<Props> = ({ question }) => {
             return /logia$/.test(k) || ['ortopedia','gastroenterologia','neurologia','cardiologia','dermatologia','endocrinologia','hemostasia','hematologia','sus','saude publica','diagnostico por imagem','laboratorio clinico','anestesiologia'].includes(k)
           }
           const specific = tags.filter(t => !isGeneric(t))
-          const mostSpecific = specific[0] || (tags.length ? [...tags].sort((a,b)=>b.length-a.length)[0] : (question.area_tags?.[0] || ''))
+          const mostSpecific = specific[0] || (tags.length ? [...tags].sort((a,b)=>b.length-a.length)[0] : ((question.area_tags && question.area_tags.length > 0) ? question.area_tags[0] : ''))
           const ok = mostSpecific ? norm(text).includes(norm(mostSpecific)) : true
           if (!ok) {
             try {
@@ -129,8 +135,21 @@ export const DrLuzaumPanel: React.FC<Props> = ({ question }) => {
         <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-blue-700/20 rounded-full blur-3xl" />
       </div>
       <div className="relative border-b border-slate-600 px-5 py-4">
-        <h3 className="text-white font-semibold text-lg">Olá, sou o Dr. Luzaum — vamos revisar juntos?</h3>
-        <p className="text-white/85 text-sm"><span className="font-semibold">Tema:</span> {(question.topic_tags && question.topic_tags.length) ? question.topic_tags.join(', ') : question.area_tags.join(', ')}</p>
+        <div className="flex justify-between items-start">
+          <div>
+            <h3 className="text-white font-semibold text-lg">Olá, sou o Dr. Luzaum — vamos revisar juntos?</h3>
+            <p className="text-white/85 text-sm"><span className="font-semibold">Tema:</span> {(question.topic_tags && question.topic_tags.length) ? question.topic_tags.join(', ') : (question.area_tags && question.area_tags.length) ? question.area_tags.join(', ') : 'Tema não especificado'}</p>
+          </div>
+          {onClose && (
+            <button
+              onClick={onClose}
+              className="text-white/70 hover:text-white p-1 rounded-md hover:bg-white/10 transition-colors"
+              title="Fechar"
+            >
+              ✕
+            </button>
+          )}
+        </div>
       </div>
       <div className="relative p-5 text-sm text-white flex flex-col gap-3">
         {loading && <div className="text-sm text-white/80">Gerando revisão com o Dr. Luzaum...</div>}
@@ -176,5 +195,3 @@ export const DrLuzaumPanel: React.FC<Props> = ({ question }) => {
 }
 
 export default DrLuzaumPanel
-
-

@@ -1,19 +1,23 @@
-import React, { useEffect, useState } from 'react'
-import { QuestionCard } from './QuestionCard'
-import { Filter, Maximize } from 'lucide-react'
-import {
-  getQuestionsByArea,
-  getQuestionsByTheme,
-} from '../../utils/localStorage'
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import { useQuestionState } from '../../context/QuestionContext';
+import { QuestionCard } from './QuestionCard';
+import { Filter, Maximize } from 'lucide-react';
+import { SimpleQuestion } from '../../types';
 
 export function StudyPage() {
-  const [isFocusMode, setIsFocusMode] = useState(false)
-  const [selectedArea, setSelectedArea] = useState<string | null>(null)
-  const [selectedTheme, setSelectedTheme] = useState<string | null>(null)
-  const [isAreaDropdownOpen, setIsAreaDropdownOpen] = useState(false)
-  const [isThemeDropdownOpen, setIsThemeDropdownOpen] = useState(false)
-  const [questions, setQuestions] = useState<any[]>([])
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
+  const { questions: allQuestions } = useQuestionState();
+  
+  // Estados para os filtros
+  const [selectedArea, setSelectedArea] = useState<string | null>(null);
+  const [selectedTheme, setSelectedTheme] = useState<string | null>(null);
+  const [isFocusMode, setIsFocusMode] = useState(false);
+  const [isAreaDropdownOpen, setIsAreaDropdownOpen] = useState(false);
+  const [isThemeDropdownOpen, setIsThemeDropdownOpen] = useState(false);
+
+  // ESTADO CRÍTICO: Índice da questão na lista filtrada. Gerenciado LOCALMENTE.
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+
 
   const areas = [
     'Todas',
@@ -34,80 +38,29 @@ export function StudyPage() {
     'Farmacologia',
   ]
 
-  // Load questions based on selected filters
+  // MEMOIZATION: A lista de questões filtradas só é recalculada se os filtros ou a lista mestre mudarem.
+  // Isso impede que a lista mude apenas por um toggle de favorito/salvo.
+  const filteredQuestions = useMemo(() => {
+    console.log("Recalculando lista de questões filtradas...");
+    return allQuestions.filter(q => {
+      const areaMatch = !selectedArea || selectedArea === 'Todas' || q.area === selectedArea;
+      const themeMatch = !selectedTheme || selectedTheme === 'Todos' || q.theme === selectedTheme;
+      return areaMatch && themeMatch;
+    });
+  }, [allQuestions, selectedArea, selectedTheme]);
+
+  // Efeito para resetar o índice QUANDO OS FILTROS MUDAM
   useEffect(() => {
-    let filteredQuestions = []
-    if (selectedTheme && selectedTheme !== 'Todos') {
-      filteredQuestions = getQuestionsByTheme(selectedTheme)
-    } else if (selectedArea && selectedArea !== 'Todas') {
-      filteredQuestions = getQuestionsByArea(selectedArea)
-    } else {
-      filteredQuestions = getQuestionsByArea(null)
-    }
+    setCurrentIndex(0);
+  }, [selectedArea, selectedTheme]);
 
-    // Shuffle questions for random selection
-    const shuffledQuestions = [...filteredQuestions].sort(
-      () => Math.random() - 0.5,
-    )
-    setQuestions(shuffledQuestions)
-    setCurrentQuestionIndex(0)
-  }, [selectedArea, selectedTheme])
+  // Função para avançar para a próxima questão. ESTA É A ÚNICA FUNÇÃO QUE MUDA O ÍNDICE.
+  const handleNextQuestion = useCallback(() => {
+    setCurrentIndex(prevIndex => (prevIndex + 1) % filteredQuestions.length);
+  }, [filteredQuestions.length]);
 
-  const handleNextQuestion = () => {
-    if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1)
-    } else {
-      // If we've reached the end, shuffle and restart
-      const shuffledQuestions = [...questions].sort(() => Math.random() - 0.5)
-      setQuestions(shuffledQuestions)
-      setCurrentQuestionIndex(0)
-    }
-  }
-
-  const currentQuestion =
-    questions.length > 0
-      ? questions[currentQuestionIndex]
-      : {
-          id: '123',
-          faculty: 'UFV',
-          year: '2022',
-          area: 'CLÍNICA MÉDICA',
-          theme: 'FARMACOLOGIA',
-          question:
-            'Assinale a alternativa que representa um diurético de alça utilizado em cães que se tornam refratários a altas doses de furosemida no tratamento crônico da insuficiência cardíaca.',
-          alternatives: [
-            {
-              id: 'a',
-              text: 'Espironolactona',
-              isCorrect: false,
-              explanation:
-                'Incorreta. A espironolactona é um diurético poupador de potássio, que atua como antagonista da aldosterona no túbulo distal. É usado como terapia adjuvante na ICC por seus efeitos antifibróticos e neuro-hormonais, não como diurético principal.',
-            },
-            {
-              id: 'b',
-              text: 'Clorotiazida',
-              isCorrect: false,
-              explanation:
-                'Incorreta. A clorotiazida é um diurético tiazídico, que atua no túbulo contorcido distal. Eles são usados em combinação com a furosemida para criar um "bloqueio sequencial do néfron" em casos refratários, mas não são diuréticos de alça.',
-            },
-            {
-              id: 'c',
-              text: 'Hidrocloratiazida',
-              isCorrect: false,
-              explanation:
-                'Incorreta. A hidrocloratiazida é um diurético tiazídico, que atua no túbulo contorcido distal. Eles são usados em combinação com a furosemida para criar um "bloqueio sequencial do néfron" em casos refratários, mas não são diuréticos de alça.',
-            },
-            {
-              id: 'd',
-              text: 'Torsemida',
-              isCorrect: true,
-              explanation:
-                'Correta. A torsemida é um diurético de alça, assim como a furosemida. No entanto, possui maior biodisponibilidade oral (é melhor absorvida) e uma duração de ação mais longa. É a alternativa de escolha quando se desenvolve resistência à furosemida.',
-            },
-          ],
-          explanation:
-            'A torsemida é um diurético de alça, assim como a furosemida. No entanto, possui maior biodisponibilidade oral (é melhor absorvida) e uma duração de ação mais longa. É a alternativa de escolha quando se desenvolve resistência à furosemida.',
-        }
+  // A questão atual é derivada do estado local e da lista memoizada.
+  const currentQuestion = filteredQuestions[currentIndex];
 
   return (
     <div
@@ -186,12 +139,37 @@ export function StudyPage() {
         </>
       )}
 
-      <QuestionCard
-        question={currentQuestion}
-        isFocusMode={isFocusMode}
-        onExitFocusMode={() => setIsFocusMode(false)}
-        onNextQuestion={handleNextQuestion}
-      />
+
+
+      {currentQuestion ? (
+        <QuestionCard
+          // A chave (key) é crucial. Ela força o React a remontar o componente
+          // quando o ID da questão muda, garantindo que o estado interno dele seja resetado.
+          key={currentQuestion.id} 
+          question={currentQuestion}
+          isFocusMode={isFocusMode}
+          onExitFocusMode={() => setIsFocusMode(false)}
+          onNextQuestion={handleNextQuestion}
+        />
+      ) : (
+        <div className="text-center py-12">
+          <div className="bg-card border rounded-lg p-8 max-w-md mx-auto">
+            <h3 className="text-lg font-medium mb-2">Nenhuma questão encontrada</h3>
+            <p className="text-muted-foreground mb-4">
+              Não há questões disponíveis com os filtros selecionados.
+            </p>
+            <button
+              onClick={() => {
+                setSelectedArea(null)
+                setSelectedTheme(null)
+              }}
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md font-medium transition-colors"
+            >
+              Limpar Filtros
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

@@ -80,10 +80,53 @@ const STORAGE_KEY = 'rota-r1-data'
 
 // Initialize question bank with sample questions
 export function initializeQuestionBank(questions: Question[]) {
-  const existingData = getAppData()
-  if (!existingData.questions.length) {
-    existingData.questions = questions
-    saveAppData(existingData)
+  try {
+    const existingData = getAppData()
+    
+    // A VERIFICAÇÃO CRÍTICA: Se não houver questões no localStorage, popule-o.
+    // A verificação "existingData.questions?.length" agora é segura.
+    if (!existingData.questions || existingData.questions.length === 0) {
+      console.log("Inicializando o banco de questões no localStorage...");
+      const newData: AppData = {
+        ...existingData, // Mantém outros dados como favoritos, se existirem
+        questions: questions, // Popula com as questões fornecidas
+        statistics: {
+          totalAnswered: 0,
+          totalCorrect: 0,
+          totalIncorrect: 0,
+          averageTime: 0,
+          areaStats: {},
+        }, // Zera as estatísticas
+      };
+      saveAppData(newData);
+      console.log("Banco de questões inicializado com sucesso!");
+    } else {
+      console.log("Banco de questões já existe no localStorage.");
+    }
+  } catch (error) {
+    console.error("Erro ao inicializar banco de questões:", error);
+    // Em caso de erro, tenta criar um estado inicial limpo
+    try {
+      const cleanData: AppData = {
+        questions: questions,
+        favorites: [],
+        saved: [],
+        notes: [],
+        simuladoResults: [],
+        statistics: {
+          totalAnswered: 0,
+          totalCorrect: 0,
+          totalIncorrect: 0,
+          averageTime: 0,
+          areaStats: {},
+        },
+        drLuzaumChat: [],
+      };
+      saveAppData(cleanData);
+      console.log("Banco de questões criado com estado limpo após erro.");
+    } catch (fallbackError) {
+      console.error("Erro crítico ao criar banco de questões:", fallbackError);
+    }
   }
 }
 

@@ -58,7 +58,9 @@ export function Sidebar() {
   return (
     <div className="flex flex-col h-full border-r bg-background">
       <div className="p-6 flex items-center justify-center">
-        <h1 className="logo-neon">Rota R1</h1>
+        <h1 className="text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text animate-gradient-pan">
+          Rota R1
+        </h1>
       </div>
 
       <nav className="flex-1 px-4 space-y-2">

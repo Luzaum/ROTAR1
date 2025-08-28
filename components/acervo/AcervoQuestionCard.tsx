@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { BookOpen, ChevronDown, ChevronUp } from 'lucide-react'
 import { DrLuzaumModal } from '../study/DrLuzaumModal'
+import { ActionIconButton } from '../ui/ActionIconButton'
+import { useQuestionDispatch } from '../../context/QuestionContext'
 
 interface Alternative {
   id: string
@@ -9,17 +11,9 @@ interface Alternative {
   explanation: string
 }
 
-interface Question {
-  id: string
-  faculty?: string
-  year?: string
-  title?: string
-  area?: string
-  theme?: string
-  question: string
-  alternatives: Alternative[]
-  explanation?: string
-}
+import { SimpleQuestion } from '../../types'
+
+interface Question extends SimpleQuestion {}
 
 interface AcervoQuestionCardProps {
   question: Question
@@ -28,6 +22,8 @@ interface AcervoQuestionCardProps {
 export function AcervoQuestionCard({ question }: AcervoQuestionCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  
+  const dispatch = useQuestionDispatch()
 
   // Encontrar a alternativa correta
   const correctAlternative = question.alternatives.find(alt => alt.isCorrect)
@@ -36,6 +32,15 @@ export function AcervoQuestionCard({ question }: AcervoQuestionCardProps) {
   const questionTitle = question.faculty && question.year && question.area && question.theme
     ? `(${question.faculty}-${question.year}) ${question.area} - ${question.theme}`
     : question.title || ''
+
+  // Funções para alternar favorito e salvo
+  const handleToggleFavorite = () => {
+    dispatch({ type: 'TOGGLE_FAVORITE', payload: { questionId: question.id } })
+  }
+
+  const handleToggleSaved = () => {
+    dispatch({ type: 'TOGGLE_SAVE', payload: { questionId: question.id } })
+  }
 
   return (
     <div className="bg-card border rounded-lg shadow-card hover:shadow-card-hover transition-all duration-200">
@@ -120,6 +125,20 @@ export function AcervoQuestionCard({ question }: AcervoQuestionCardProps) {
               </p>
             </div>
           )}
+
+          {/* Ações da Questão */}
+          <div className="flex flex-wrap gap-4 justify-center">
+            <ActionIconButton
+              type="favorite"
+              isToggled={question.isFavorited || false}
+              onClick={handleToggleFavorite}
+            />
+            <ActionIconButton
+              type="save"
+              isToggled={question.isSaved || false}
+              onClick={handleToggleSaved}
+            />
+          </div>
 
           {/* Botão Dr. Luzaum */}
           <div className="flex justify-center pt-4">
