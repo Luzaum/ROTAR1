@@ -21,11 +21,17 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
+      document.body.style.position = 'fixed'
+      document.body.style.width = '100%'
     } else {
       document.body.style.overflow = 'auto'
+      document.body.style.position = ''
+      document.body.style.width = ''
     }
     return () => {
       document.body.style.overflow = 'auto'
+      document.body.style.position = ''
+      document.body.style.width = ''
     }
   }, [isOpen])
 
@@ -80,35 +86,39 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
         className="fixed inset-0 bg-background/80 backdrop-blur-sm z-40"
         onClick={onClose}
       />
-      <div className="fixed inset-y-0 left-0 w-3/4 max-w-xs bg-background p-6 shadow-lg z-50 overflow-y-auto">
-        <div className="flex items-center justify-between mb-8">
+      <div className="fixed inset-y-0 left-0 w-3/4 max-w-xs bg-background p-4 md:p-6 shadow-lg z-50 overflow-y-auto overscroll-contain">
+        <div className="flex items-center justify-between mb-6 md:mb-8">
           <h1 className="logo-neon text-lg">Rota R1</h1>
-          <button onClick={onClose} className="p-1 rounded-md hover:bg-accent">
+          <button 
+            onClick={onClose} 
+            className="p-2 rounded-md hover:bg-accent transition-colors"
+            aria-label="Fechar menu"
+          >
             <X size={24} />
           </button>
         </div>
 
-        <nav className="space-y-2">
+        <nav className="space-y-1">
           {navItems.map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
               onClick={onClose}
               className={({ isActive }) =>
-                `flex items-center gap-3 px-4 py-3 rounded-md transition-colors ${
+                `flex items-center gap-3 px-3 py-3 rounded-md transition-colors ${
                   isActive ? 'bg-accent text-primary' : 'hover:bg-accent/50'
                 }`
               }
             >
               {item.icon}
-              <span>{item.name}</span>
+              <span className="text-sm md:text-base">{item.name}</span>
             </NavLink>
           ))}
         </nav>
 
-        <div className="mt-8 pt-4 border-t">
-          <div className="flex items-center gap-3 px-4 py-2">
-            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
+        <div className="mt-6 md:mt-8 pt-4 border-t">
+          <div className="flex items-center gap-3 px-3 py-2">
+            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground text-sm font-medium">
               V
             </div>
             <div className="flex-1 min-w-0">

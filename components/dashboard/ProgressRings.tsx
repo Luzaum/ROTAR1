@@ -42,10 +42,10 @@ function ProgressRing({ percentage, size, strokeWidth, color, label }: ProgressR
           />
         </svg>
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-lg font-semibold">{percentage}%</span>
+          <span className="text-sm md:text-lg font-semibold">{percentage}%</span>
         </div>
       </div>
-      <span className="text-sm text-muted-foreground mt-2 text-center">{label}</span>
+      <span className="text-xs md:text-sm text-muted-foreground mt-1 md:mt-2 text-center">{label}</span>
     </div>
   )
 }
@@ -99,23 +99,26 @@ export function ProgressRings() {
     },
   ]
 
+  // Detectar se é dispositivo móvel
+  const isMobile = window.innerWidth <= 768
+
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 md:space-y-6">
       {/* Overall Performance */}
       <div>
-        <h3 className="text-lg font-medium mb-4">Desempenho Geral</h3>
-        <div className="grid grid-cols-2 gap-6">
+        <h3 className="text-base md:text-lg font-medium mb-3 md:mb-4">Desempenho Geral</h3>
+        <div className="grid grid-cols-2 gap-4 md:gap-6">
           <ProgressRing
             percentage={correctPercentage}
-            size={80}
-            strokeWidth={8}
+            size={isMobile ? 60 : 80}
+            strokeWidth={isMobile ? 6 : 8}
             color="hsl(142 76% 36%)"
             label="Acertos"
           />
           <ProgressRing
             percentage={incorrectPercentage}
-            size={80}
-            strokeWidth={8}
+            size={isMobile ? 60 : 80}
+            strokeWidth={isMobile ? 6 : 8}
             color="hsl(0 84% 60%)"
             label="Erros"
           />
@@ -124,14 +127,14 @@ export function ProgressRings() {
 
       {/* Area Performance */}
       <div>
-        <h3 className="text-lg font-medium mb-4">Desempenho por Área</h3>
-        <div className="grid grid-cols-2 gap-4">
+        <h3 className="text-base md:text-lg font-medium mb-3 md:mb-4">Desempenho por Área</h3>
+        <div className="grid grid-cols-2 gap-3 md:gap-4">
           {areas.map((area) => (
             <ProgressRing
               key={area.name}
               percentage={area.performance}
-              size={60}
-              strokeWidth={6}
+              size={isMobile ? 50 : 60}
+              strokeWidth={isMobile ? 4 : 6}
               color={area.color}
               label={area.name}
             />
@@ -140,9 +143,9 @@ export function ProgressRings() {
       </div>
 
       {/* Statistics Summary */}
-      <div className="bg-muted/50 rounded-lg p-4">
-        <h3 className="text-lg font-medium mb-3">Resumo</h3>
-        <div className="grid grid-cols-2 gap-4 text-sm">
+      <div className="bg-muted/50 rounded-lg p-3 md:p-4">
+        <h3 className="text-base md:text-lg font-medium mb-2 md:mb-3">Resumo</h3>
+        <div className="grid grid-cols-2 gap-3 md:gap-4 text-xs md:text-sm">
           <div>
             <span className="text-muted-foreground">Total de questões:</span>
             <span className="ml-2 font-medium">{totalQuestions}</span>

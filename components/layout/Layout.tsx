@@ -11,19 +11,19 @@ export function Layout({ children }: LayoutProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
-    <div className="flex min-h-screen bg-background">
+    <div className="flex min-h-screen bg-background overflow-x-hidden">
       {/* Desktop Sidebar */}
       <div className="hidden md:block w-60 shrink-0">
         <Sidebar />
       </div>
 
       {/* Main Content */}
-      <div className="flex-1">
+      <div className="flex-1 min-w-0">
         {/* Mobile Header */}
-        <div className="md:hidden flex items-center justify-between h-16 px-4 border-b">
+        <div className="md:hidden flex items-center justify-between h-16 px-4 border-b bg-background/95 backdrop-blur-sm sticky top-0 z-30">
           <div className="flex items-center">
             <div className="flex items-center gap-2">
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text animate-gradient-pan">
+              <h1 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text animate-gradient-pan">
                 Rota R1
               </h1>
             </div>
@@ -32,7 +32,8 @@ export function Layout({ children }: LayoutProps) {
             <ThemeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className="p-2 rounded-md hover:bg-accent"
+              className="p-2 rounded-md hover:bg-accent transition-colors"
+              aria-label="Abrir menu"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +67,7 @@ export function Layout({ children }: LayoutProps) {
         />
 
         {/* Page Content */}
-        <main className="min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-4rem)]">
+        <main className="min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-4rem)] overflow-x-hidden">
           {children}
         </main>
       </div>

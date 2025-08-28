@@ -88,15 +88,23 @@ export function PerformanceRadarChart() {
     }
   }
 
+  // Detectar se é dispositivo móvel
+  const isMobile = window.innerWidth <= 768
+
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+      <RadarChart 
+        cx="50%" 
+        cy="50%" 
+        outerRadius={isMobile ? "60%" : "80%"} 
+        data={data}
+      >
         <PolarGrid />
         <PolarAngleAxis
           dataKey="subject"
           tick={{
             fill: 'currentColor',
-            fontSize: 12,
+            fontSize: isMobile ? 10 : 12,
           }}
           style={{
             cursor: 'pointer',
@@ -119,6 +127,7 @@ export function PerformanceRadarChart() {
           contentStyle={{
             backgroundColor: 'hsl(var(--card))',
             borderColor: 'hsl(var(--border))',
+            fontSize: isMobile ? '12px' : '14px',
           }}
         />
       </RadarChart>
